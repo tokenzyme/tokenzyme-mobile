@@ -1,0 +1,243 @@
+"""
+Indicates exactly one field must be supplied and this field must not be `null`.
+"""
+directive @oneOf on INPUT_OBJECT
+
+directive @appAuth on QUERY | MUTATION
+
+type Account {
+    address: String!
+}
+
+type SignInResult {
+    account: Account!
+    token: String!
+}
+
+type SignatureMessage {
+    id: String!
+    message: String!
+}
+
+type Admin {
+    id: Int!
+    name: String!
+    email: String!
+}
+
+type AppAccount {
+    email: String!
+    xHandle: String
+    tgHandle: String
+    referralCode: String!
+    rewardsClaimed: Int!
+}
+
+type AppSignInResult {
+    appAccount: AppAccount!
+    token: String!
+}
+
+type ReferralInfo {
+    rewardByReferee: Int!
+    refereesCount: Int!
+}
+
+type NextCheckInInfo {
+    reward: Int!
+    isAvailable: Boolean!
+    availableAt: DateTime
+}
+
+"""
+A date-time string at UTC, such as 2007-12-03T10:15:30Z, compliant with the `date-time` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.
+"""
+scalar DateTime
+
+type Comment {
+    id: Int!
+    accountAddress: String!
+    text: String!
+    createdAt: DateTime!
+}
+
+type SocialTask {
+    id: Int!
+    network: SocialNetwork!
+    title: String!
+    description: String!
+    targetUrl: String!
+    reward: Int!
+    isProofRequired: Boolean!
+    isProofPrefixedByHandleUrl: Boolean!
+    proofInstructions: String
+    dueDate: Date
+    createdAt: DateTime!
+}
+
+enum SocialNetwork {
+    X
+    TELEGRAM
+}
+
+"""
+A date string, such as 2007-12-03, compliant with the `full-date` format outlined in section 5.6 of the RFC 3339 profile of the ISO 8601 standard for representation of dates and times using the Gregorian calendar.
+"""
+scalar Date
+
+type SocialMedia {
+    xUrl: String
+    telegramUrl: String
+    discordUrl: String
+    redditUrl: String
+    facebookUrl: String
+    instagramUrl: String
+}
+
+type Token {
+    address: String!
+    creatorAddress: String!
+    name: String!
+    symbol: String!
+    description: String!
+    logoUrl: String!
+    websiteUrl: String
+    totalSupply: Decimal!
+    bondingCurveSupply: Decimal!
+    ethReserve: Decimal!
+    reserve: Decimal!
+    price: Decimal!
+    finalPrice: Decimal!
+    dexPoolAddress: String
+    migratedAt: DateTime
+    createdAt: DateTime!
+    socialMedia: SocialMedia
+    tradesCount: Int!
+    commentsCount: Int!
+}
+
+"""Decimal value as a number"""
+scalar Decimal
+
+type TopHolder {
+    accountAddress: String!
+    balance: Decimal!
+    percentage: Float!
+}
+
+type UploadSignedUrl {
+    uploadUrl: String!
+    cdnUrl: String!
+}
+
+type TradeCandle {
+    time: Float!
+    open: Decimal!
+    high: Decimal!
+    low: Decimal!
+    close: Decimal!
+    volume: Decimal!
+}
+
+type Trade {
+    id: String!
+    accountAddress: String!
+    type: TradeType!
+    tokenAmount: Decimal!
+    ethAmount: Decimal!
+    createdAt: DateTime!
+}
+
+enum TradeType {
+    BUY
+    SELL
+}
+
+type Query {
+    admin: Admin!
+    appAccount: AppAccount!
+    hasAppAccount(email: String!): Boolean!
+    referralInfo: ReferralInfo!
+    nextCheckInInfo: NextCheckInInfo!
+    comments(tokenAddress: String!, pageSize: Int!, lastCommentId: Int): [Comment!]!
+    ethPrice: Float!
+    latestSocialTasks(pageSize: Int!): [SocialTask!]!
+    pendingSocialTasks(pageSize: Int!, lastTaskId: Int): [SocialTask!]!
+    tokenLogoUploadUrl: UploadSignedUrl!
+    tokens(sortType: TokenSortType!, pageSize: Int, lastTokenAddress: String): [Token!]!
+    firstPromotedTokensOfMonth: [Token!]!
+    isTokenRegistered(address: String!): Boolean!
+    token(address: String!): Token!
+    topHolders(tokenAddress: String!): [TopHolder!]!
+    trades(tokenAddress: String!, pageSize: Int!, lastTradeId: String): [Trade!]!
+    tradeCandles(tokenAddress: String!, resolution: String!, pageSize: Int!, lastCandleTimestamp: Float): [TradeCandle!]!
+}
+
+enum TokenSortType {
+    NEW
+    PROGRESS
+    PROMOTED
+}
+
+type Mutation {
+    signIn(input: SignInInput!): SignInResult!
+    createSignatureMessage(input: CreateSignatureMessageInput!): SignatureMessage!
+    sendAppSignInOtp(input: SendAppSignInOtpInput!): Boolean!
+    appSignIn(input: AppSignInInput!): AppSignInResult!
+    updateSocialNetworkHandle(input: UpdateSocialNetworkHandleInput!): AppAccount!
+    checkIn: Boolean!
+    addComment(input: AddCommentInput!): Comment!
+    registerSocialTask(input: RegisterSocialTaskInput!): SocialTask!
+    completeSocialTask(input: CompleteSocialTaskInput!): Boolean!
+}
+
+input SignInInput {
+    signatureMessageId: String!
+    signature: String!
+}
+
+input CreateSignatureMessageInput {
+    accountAddress: String!
+    type: SignatureMessageType!
+}
+
+enum SignatureMessageType {
+    SIGN_IN
+}
+
+input SendAppSignInOtpInput {
+    email: String!
+}
+
+input AppSignInInput {
+    email: String!
+    otp: String!
+    referralCode: String
+}
+
+input UpdateSocialNetworkHandleInput {
+    network: SocialNetwork!
+    handle: String!
+}
+
+input AddCommentInput {
+    tokenAddress: String!
+    text: String!
+}
+
+input RegisterSocialTaskInput {
+    network: SocialNetwork!
+    title: String!
+    description: String!
+    targetUrl: String!
+    reward: Int!
+    isProofRequired: Boolean!
+    isProofPrefixedByHandleUrl: Boolean!
+    proofInstructions: String
+    dueDate: Date
+}
+
+input CompleteSocialTaskInput {
+    taskId: Int!
+    proofUrl: String
+}

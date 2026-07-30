@@ -1,0 +1,23 @@
+targets:
+  $default:
+    builders:
+      graphql_codegen:
+        options:
+          clients:
+            - graphql_flutter
+          scalars:
+            Decimal:
+              type: Decimal
+              fromJsonFunctionName: decimalFromJson
+              toJsonFunctionName: decimalToJson
+              import: package:tokenzyme_mobile/graphql/scalars.dart
+            DateTime:
+              type: DateTime
+              fromJsonFunctionName: dateTimeFromJson
+              toJsonFunctionName: dateTimeToJson
+              import: package:tokenzyme_mobile/graphql/scalars.dart
+            Date:
+              type: DateTime
+              fromJsonFunctionName: dateTimeFromJson
+              toJsonFunctionName: dateTimeToJson
+              import: package:tokenzyme_mobile/graphql/scalars.dart

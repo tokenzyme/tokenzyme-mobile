@@ -1,0 +1,53 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+permissions:
+  contents: read
+
+jobs:
+  analyze:
+    name: Analyze and build
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - uses: subosito/flutter-action@v2
+        with:
+          flutter-version: 3.38.5
+          channel: stable
+          cache: true
+
+      - name: Install dependencies
+        run: flutter pub get
+
+      # pubspec.yaml declares .env as an asset, so analysis and any build need the
+      # file to exist. These are placeholders — nothing here reaches a real network,
+      # and nothing in .env is secret by design (it ships inside the app bundle).
+      - name: Create placeholder .env
+        run: |
+          cat > .env <<'EOF'
+          CORE_URL="http://localhost:3000"
+          INDEXER_URL="http://localhost:3002"
+          APP_URL="http://localhost:3001"
+          REOWN_PROJECT_ID="ci-placeholder"
+          NETWORK="testnet"
+          LAUNCHPAD_ADDRESS="0x0000000000000000000000000000000000000000"
+          EOF
+
+      - name: Analyze
+        run: flutter analyze
+
+      # Catches breakage that analysis alone misses — asset wiring, plugin
+      # registration, Gradle configuration.
+      - name: Build debug APK
+        run: flutter build apk --debug

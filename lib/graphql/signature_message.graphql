@@ -1,0 +1,6 @@
+mutation CreateSignatureMessage($input: CreateSignatureMessageInput!) {
+    createSignatureMessage(input: $input) {
+        id
+        message
+    }
+}

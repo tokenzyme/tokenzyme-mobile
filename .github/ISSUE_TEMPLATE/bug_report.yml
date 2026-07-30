@@ -1,0 +1,98 @@
+name: Bug report
+description: Report incorrect behaviour in the mobile app
+labels: [bug]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        **Do not use this form for security vulnerabilities**, especially anything where
+        the transaction signed differs from what the interface displayed. Report those
+        privately — see [SECURITY.md](https://github.com/tokenzyme/tokenzyme-mobile/blob/main/SECURITY.md).
+
+        **Chart problems** usually belong in
+        [tokenzyme-app](https://github.com/tokenzyme/tokenzyme-app/issues) — the chart is a
+        WebView of the web client.
+
+  - type: textarea
+    id: description
+    attributes:
+      label: What happened?
+      description: Describe the incorrect behaviour and what you expected instead.
+    validations:
+      required: true
+
+  - type: textarea
+    id: reproduction
+    attributes:
+      label: Steps to reproduce
+    validations:
+      required: true
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: Platform
+      options:
+        - Android
+        - iOS
+        - Both
+    validations:
+      required: true
+
+  - type: input
+    id: device
+    attributes:
+      label: Device and OS version
+      placeholder: 'e.g. Pixel 8, Android 15'
+
+  - type: dropdown
+    id: area
+    attributes:
+      label: Where?
+      options:
+        - Token list
+        - Launch a token
+        - Token page — buy/sell
+        - Token page — comments
+        - Token page — chart (see note above)
+        - Wallet connection
+        - Startup / configuration
+        - Other
+    validations:
+      required: true
+
+  - type: dropdown
+    id: network
+    attributes:
+      label: Network
+      options:
+        - mainnet
+        - testnet
+        - testnet-legacy
+    validations:
+      required: true
+
+  - type: input
+    id: wallet
+    attributes:
+      label: Wallet app
+      placeholder: 'e.g. MetaMask 7.5'
+
+  - type: input
+    id: transaction
+    attributes:
+      label: Transaction hash
+      description: If a transaction was involved.
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Logs
+      description: Output from `flutter run` or `adb logcat`, if you have it.
+      render: shell
+
+  - type: input
+    id: version
+    attributes:
+      label: App version or commit
+      placeholder: 'e.g. 1.0.1+2, or main @ a1b2c3d'

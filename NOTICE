@@ -1,0 +1,66 @@
+Tokenzyme Mobile
+Copyright 2025 Sandro Simas
+
+This product includes software developed as part of the Tokenzyme project
+(https://github.com/tokenzyme).
+
+Licensed under the Apache License, Version 2.0 (the "License");
+you may not use this file except in compliance with the License.
+You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+Unless required by applicable law or agreed to in writing, software
+distributed under the License is distributed on an "AS IS" BASIS,
+WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+See the License for the specific language governing permissions and
+limitations under the License.
+
+--------------------------------------------------------------------------------
+
+"Tokenzyme", the Tokenzyme name, the Tokenzyme logo and the app icon are not
+licensed under the Apache License 2.0. See section 6 of the License and the
+Trademarks section of the README.
+
+The application identifier "com.tokenzyme" (Android applicationId and iOS bundle
+identifier) likewise identifies the Tokenzyme publisher. Change it before
+publishing a fork.
+
+--------------------------------------------------------------------------------
+
+Bundled assets:
+
+  fonts/Ubuntu/          Ubuntu font family, Copyright 2010,2011 Canonical Ltd.
+                         Licensed under the Ubuntu Font Licence 1.0, reproduced
+                         in fonts/Ubuntu/LICENCE.txt. Clause 1 of that licence
+                         requires the notice and licence to accompany every copy
+                         of the fonts — keep LICENCE.txt alongside the .ttf files
+                         if you redistribute them.
+
+  assets/launchpad_abi.json, assets/erc20_abi.json
+                         Contract ABIs generated in the tokenzyme-contracts
+                         repository. Covered by that repository's MIT license.
+
+Generated code committed to this repository:
+
+  lib/graphql/*.graphql.dart, lib/**/*.g.dart
+                         Produced by build_runner from the .graphql documents and
+                         annotated sources in this repository.
+
+--------------------------------------------------------------------------------
+
+Third-party dependencies are resolved from pub.dev and are not vendored into this
+repository. Their licenses apply as published. Principal dependencies:
+
+  flutter                        UI framework
+  hooks_riverpod, riverpod_annotation, flutter_hooks   state management
+  graphql_flutter, gql           GraphQL client
+  web3dart                       Ethereum client library
+  reown_appkit                   wallet connection
+  webview_flutter                embeds the chart from tokenzyme-app
+  socket_io_client               WebSocket transport
+  flutter_secure_storage, shared_preferences           local storage
+  decimal, intl, timeago         formatting
+  hugeicons                      icon set
+
+Review each package's terms before redistributing a build that bundles them.

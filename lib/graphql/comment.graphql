@@ -1,0 +1,14 @@
+query ListComments($tokenAddress: String!, $pageSize: Int!, $lastCommentId: Int) {
+    comments(tokenAddress: $tokenAddress, pageSize: $pageSize, lastCommentId: $lastCommentId) {
+        id
+        accountAddress
+        text
+        createdAt
+    }
+}
+
+mutation AddComment($input: AddCommentInput!) {
+    addComment(input: $input) {
+        id
+    }
+}

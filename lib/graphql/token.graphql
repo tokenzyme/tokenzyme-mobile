@@ -1,0 +1,66 @@
+query GetTokenLogoUploadUrl {
+    tokenLogoUploadUrl {
+        uploadUrl
+        cdnUrl
+    }
+}
+
+query IsTokenRegistered($address: String!) {
+    isTokenRegistered(address: $address)
+}
+
+query GetToken($address: String!) {
+    token(address: $address) {
+        address
+        creatorAddress
+        name
+        symbol
+        description
+        logoUrl
+        websiteUrl
+        totalSupply
+        bondingCurveSupply
+        ethReserve
+        reserve
+        price
+        finalPrice
+        dexPoolAddress
+        migratedAt
+        createdAt
+        tradesCount
+        commentsCount
+        socialMedia {
+            xUrl
+            telegramUrl
+            discordUrl
+            redditUrl
+            facebookUrl
+            instagramUrl
+        }
+    }
+}
+
+query ListTokens($sortType: TokenSortType!, $pageSize: Int, $lastTokenAddress: String) {
+    tokens(sortType: $sortType, pageSize: $pageSize, lastTokenAddress: $lastTokenAddress) {
+        address
+        creatorAddress
+        name
+        symbol
+        logoUrl
+        totalSupply
+        bondingCurveSupply
+        reserve
+        price
+        createdAt
+        tradesCount
+        commentsCount
+    }
+}
+
+query ListTopHolders($tokenAddress: String!) {
+    topHolders(tokenAddress: $tokenAddress) {
+        accountAddress
+        balance
+        percentage
+    }
+}

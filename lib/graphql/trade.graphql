@@ -1,0 +1,10 @@
+query ListTrades($tokenAddress: String!, $pageSize: Int!, $lastTradeId: String) {
+    trades(tokenAddress: $tokenAddress, pageSize: $pageSize, lastTradeId: $lastTradeId) {
+        id
+        accountAddress
+        type
+        tokenAmount
+        ethAmount
+        createdAt
+    }
+}
