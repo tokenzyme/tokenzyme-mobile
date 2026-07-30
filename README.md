@@ -105,7 +105,7 @@ is required — `lib/utils/env.dart` throws at startup if any is missing.
 | `INDEXER_URL` | Trades and price WebSocket. |
 | `APP_URL` | Where the web client is served. The chart WebView loads from here. |
 | `REOWN_PROJECT_ID` | Create your own at [dashboard.reown.com](https://dashboard.reown.com). |
-| `NETWORK`, `LAUNCHPAD_ADDRESS` | Must match each other and the backend. Addresses are in the [contracts README](https://github.com/tokenzyme/tokenzyme-contracts#deployed-addresses). |
+| `NETWORK`, `LAUNCHPAD_ADDRESS` | Must match each other and the backend. The address is your own deployment — see [tokenzyme-contracts](https://github.com/tokenzyme/tokenzyme-contracts#deploying). |
 
 > [!WARNING]
 > `.env` is declared as a Flutter **asset** in `pubspec.yaml`, which means it is packaged
