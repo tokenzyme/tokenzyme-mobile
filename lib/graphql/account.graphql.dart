@@ -7,17 +7,16 @@ import 'schema.graphql.dart';
 
 class Variables$Mutation$SignIn {
   factory Variables$Mutation$SignIn({required Input$SignInInput input}) =>
-      Variables$Mutation$SignIn._({
-        r'input': input,
-      });
+      Variables$Mutation$SignIn._({r'input': input});
 
   Variables$Mutation$SignIn._(this._$data);
 
   factory Variables$Mutation$SignIn.fromJson(Map<String, dynamic> data) {
     final result$data = <String, dynamic>{};
     final l$input = data['input'];
-    result$data['input'] =
-        Input$SignInInput.fromJson((l$input as Map<String, dynamic>));
+    result$data['input'] = Input$SignInInput.fromJson(
+      (l$input as Map<String, dynamic>),
+    );
     return Variables$Mutation$SignIn._(result$data);
   }
 
@@ -33,10 +32,7 @@ class Variables$Mutation$SignIn {
   }
 
   CopyWith$Variables$Mutation$SignIn<Variables$Mutation$SignIn> get copyWith =>
-      CopyWith$Variables$Mutation$SignIn(
-        this,
-        (i) => i,
-      );
+      CopyWith$Variables$Mutation$SignIn(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -76,10 +72,7 @@ abstract class CopyWith$Variables$Mutation$SignIn<TRes> {
 
 class _CopyWithImpl$Variables$Mutation$SignIn<TRes>
     implements CopyWith$Variables$Mutation$SignIn<TRes> {
-  _CopyWithImpl$Variables$Mutation$SignIn(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Mutation$SignIn(this._instance, this._then);
 
   final Variables$Mutation$SignIn _instance;
 
@@ -87,11 +80,13 @@ class _CopyWithImpl$Variables$Mutation$SignIn<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? input = _undefined}) => _then(Variables$Mutation$SignIn._({
-        ..._instance._$data,
-        if (input != _undefined && input != null)
-          'input': (input as Input$SignInInput),
-      }));
+  TRes call({Object? input = _undefined}) => _then(
+    Variables$Mutation$SignIn._({
+      ..._instance._$data,
+      if (input != _undefined && input != null)
+        'input': (input as Input$SignInInput),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Mutation$SignIn<TRes>
@@ -104,17 +99,15 @@ class _CopyWithStubImpl$Variables$Mutation$SignIn<TRes>
 }
 
 class Mutation$SignIn {
-  Mutation$SignIn({
-    required this.signIn,
-    this.$__typename = 'Mutation',
-  });
+  Mutation$SignIn({required this.signIn, this.$__typename = 'Mutation'});
 
   factory Mutation$SignIn.fromJson(Map<String, dynamic> json) {
     final l$signIn = json['signIn'];
     final l$$__typename = json['__typename'];
     return Mutation$SignIn(
-      signIn:
-          Mutation$SignIn$signIn.fromJson((l$signIn as Map<String, dynamic>)),
+      signIn: Mutation$SignIn$signIn.fromJson(
+        (l$signIn as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -136,10 +129,7 @@ class Mutation$SignIn {
   int get hashCode {
     final l$signIn = signIn;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$signIn,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$signIn, l$$__typename]);
   }
 
   @override
@@ -166,10 +156,7 @@ class Mutation$SignIn {
 
 extension UtilityExtension$Mutation$SignIn on Mutation$SignIn {
   CopyWith$Mutation$SignIn<Mutation$SignIn> get copyWith =>
-      CopyWith$Mutation$SignIn(
-        this,
-        (i) => i,
-      );
+      CopyWith$Mutation$SignIn(this, (i) => i);
 }
 
 abstract class CopyWith$Mutation$SignIn<TRes> {
@@ -181,19 +168,13 @@ abstract class CopyWith$Mutation$SignIn<TRes> {
   factory CopyWith$Mutation$SignIn.stub(TRes res) =
       _CopyWithStubImpl$Mutation$SignIn;
 
-  TRes call({
-    Mutation$SignIn$signIn? signIn,
-    String? $__typename,
-  });
+  TRes call({Mutation$SignIn$signIn? signIn, String? $__typename});
   CopyWith$Mutation$SignIn$signIn<TRes> get signIn;
 }
 
 class _CopyWithImpl$Mutation$SignIn<TRes>
     implements CopyWith$Mutation$SignIn<TRes> {
-  _CopyWithImpl$Mutation$SignIn(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Mutation$SignIn(this._instance, this._then);
 
   final Mutation$SignIn _instance;
 
@@ -201,23 +182,24 @@ class _CopyWithImpl$Mutation$SignIn<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? signIn = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Mutation$SignIn(
-        signIn: signIn == _undefined || signIn == null
-            ? _instance.signIn
-            : (signIn as Mutation$SignIn$signIn),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? signIn = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Mutation$SignIn(
+          signIn: signIn == _undefined || signIn == null
+              ? _instance.signIn
+              : (signIn as Mutation$SignIn$signIn),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   CopyWith$Mutation$SignIn$signIn<TRes> get signIn {
     final local$signIn = _instance.signIn;
     return CopyWith$Mutation$SignIn$signIn(
-        local$signIn, (e) => call(signIn: e));
+      local$signIn,
+      (e) => call(signIn: e),
+    );
   }
 }
 
@@ -227,50 +209,59 @@ class _CopyWithStubImpl$Mutation$SignIn<TRes>
 
   TRes _res;
 
-  call({
-    Mutation$SignIn$signIn? signIn,
-    String? $__typename,
-  }) =>
-      _res;
+  call({Mutation$SignIn$signIn? signIn, String? $__typename}) => _res;
 
   CopyWith$Mutation$SignIn$signIn<TRes> get signIn =>
       CopyWith$Mutation$SignIn$signIn.stub(_res);
 }
 
-const documentNodeMutationSignIn = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.mutation,
-    name: NameNode(value: 'SignIn'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'input')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'SignInInput'),
-          isNonNull: true,
+const documentNodeMutationSignIn = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.mutation,
+      name: NameNode(value: 'SignIn'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'input')),
+          type: NamedTypeNode(
+            name: NameNode(value: 'SignInInput'),
+            isNonNull: true,
+          ),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      )
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'signIn'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'input'),
-            value: VariableNode(name: NameNode(value: 'input')),
-          )
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'token'),
+            name: NameNode(value: 'signIn'),
             alias: null,
-            arguments: [],
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'input'),
+                value: VariableNode(name: NameNode(value: 'input')),
+              ),
+            ],
             directives: [],
-            selectionSet: null,
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'token'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -279,24 +270,15 @@ const documentNodeMutationSignIn = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
+    ),
+  ],
+);
 Mutation$SignIn _parserFn$Mutation$SignIn(Map<String, dynamic> data) =>
     Mutation$SignIn.fromJson(data);
-typedef OnMutationCompleted$Mutation$SignIn = FutureOr<void> Function(
-  Map<String, dynamic>?,
-  Mutation$SignIn?,
-);
+typedef OnMutationCompleted$Mutation$SignIn =
+    FutureOr<void> Function(Map<String, dynamic>?, Mutation$SignIn?);
 
 class Options$Mutation$SignIn extends graphql.MutationOptions<Mutation$SignIn> {
   Options$Mutation$SignIn({
@@ -311,36 +293,36 @@ class Options$Mutation$SignIn extends graphql.MutationOptions<Mutation$SignIn> {
     OnMutationCompleted$Mutation$SignIn? onCompleted,
     graphql.OnMutationUpdate<Mutation$SignIn>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null ? null : _parserFn$Mutation$SignIn(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationSignIn,
-          parserFn: _parserFn$Mutation$SignIn,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null ? null : _parserFn$Mutation$SignIn(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationSignIn,
+         parserFn: _parserFn$Mutation$SignIn,
+       );
 
   final OnMutationCompleted$Mutation$SignIn? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
 class WatchOptions$Mutation$SignIn
@@ -359,59 +341,59 @@ class WatchOptions$Mutation$SignIn
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeMutationSignIn,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Mutation$SignIn,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeMutationSignIn,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Mutation$SignIn,
+       );
 }
 
 extension ClientExtension$Mutation$SignIn on graphql.GraphQLClient {
   Future<graphql.QueryResult<Mutation$SignIn>> mutate$SignIn(
-          Options$Mutation$SignIn options) async =>
-      await this.mutate(options);
+    Options$Mutation$SignIn options,
+  ) async => await this.mutate(options);
+
   graphql.ObservableQuery<Mutation$SignIn> watchMutation$SignIn(
-          WatchOptions$Mutation$SignIn options) =>
-      this.watchMutation(options);
+    WatchOptions$Mutation$SignIn options,
+  ) => this.watchMutation(options);
 }
 
 class Mutation$SignIn$HookResult {
-  Mutation$SignIn$HookResult(
-    this.runMutation,
-    this.result,
-  );
+  Mutation$SignIn$HookResult(this.runMutation, this.result);
 
   final RunMutation$Mutation$SignIn runMutation;
 
   final graphql.QueryResult<Mutation$SignIn> result;
 }
 
-Mutation$SignIn$HookResult useMutation$SignIn(
-    [WidgetOptions$Mutation$SignIn? options]) {
-  final result =
-      graphql_flutter.useMutation(options ?? WidgetOptions$Mutation$SignIn());
+Mutation$SignIn$HookResult useMutation$SignIn([
+  WidgetOptions$Mutation$SignIn? options,
+]) {
+  final result = graphql_flutter.useMutation(
+    options ?? WidgetOptions$Mutation$SignIn(),
+  );
   return Mutation$SignIn$HookResult(
     (variables, {optimisticResult, typedOptimisticResult}) =>
         result.runMutation(
-      variables.toJson(),
-      optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-    ),
+          variables.toJson(),
+          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+        ),
     result.result,
   );
 }
 
 graphql.ObservableQuery<Mutation$SignIn> useWatchMutation$SignIn(
-        WatchOptions$Mutation$SignIn options) =>
-    graphql_flutter.useWatchMutation(options);
+  WatchOptions$Mutation$SignIn options,
+) => graphql_flutter.useWatchMutation(options);
 
 class WidgetOptions$Mutation$SignIn
     extends graphql.MutationOptions<Mutation$SignIn> {
@@ -426,47 +408,48 @@ class WidgetOptions$Mutation$SignIn
     OnMutationCompleted$Mutation$SignIn? onCompleted,
     graphql.OnMutationUpdate<Mutation$SignIn>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null ? null : _parserFn$Mutation$SignIn(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationSignIn,
-          parserFn: _parserFn$Mutation$SignIn,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null ? null : _parserFn$Mutation$SignIn(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationSignIn,
+         parserFn: _parserFn$Mutation$SignIn,
+       );
 
   final OnMutationCompleted$Mutation$SignIn? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
-typedef RunMutation$Mutation$SignIn = graphql.MultiSourceResult<Mutation$SignIn>
-    Function(
-  Variables$Mutation$SignIn, {
-  Object? optimisticResult,
-  Mutation$SignIn? typedOptimisticResult,
-});
-typedef Builder$Mutation$SignIn = widgets.Widget Function(
-  RunMutation$Mutation$SignIn,
-  graphql.QueryResult<Mutation$SignIn>?,
-);
+typedef RunMutation$Mutation$SignIn =
+    graphql.MultiSourceResult<Mutation$SignIn> Function(
+      Variables$Mutation$SignIn, {
+      Object? optimisticResult,
+      Mutation$SignIn? typedOptimisticResult,
+    });
+typedef Builder$Mutation$SignIn =
+    widgets.Widget Function(
+      RunMutation$Mutation$SignIn,
+      graphql.QueryResult<Mutation$SignIn>?,
+    );
 
 class Mutation$SignIn$Widget extends graphql_flutter.Mutation<Mutation$SignIn> {
   Mutation$SignIn$Widget({
@@ -474,26 +457,17 @@ class Mutation$SignIn$Widget extends graphql_flutter.Mutation<Mutation$SignIn> {
     WidgetOptions$Mutation$SignIn? options,
     required Builder$Mutation$SignIn builder,
   }) : super(
-          key: key,
-          options: options ?? WidgetOptions$Mutation$SignIn(),
-          builder: (
-            run,
-            result,
-          ) =>
-              builder(
-            (
-              variables, {
-              optimisticResult,
-              typedOptimisticResult,
-            }) =>
-                run(
-              variables.toJson(),
-              optimisticResult:
-                  optimisticResult ?? typedOptimisticResult?.toJson(),
-            ),
-            result,
-          ),
-        );
+         key: key,
+         options: options ?? WidgetOptions$Mutation$SignIn(),
+         builder: (run, result) => builder(
+           (variables, {optimisticResult, typedOptimisticResult}) => run(
+             variables.toJson(),
+             optimisticResult:
+                 optimisticResult ?? typedOptimisticResult?.toJson(),
+           ),
+           result,
+         ),
+       );
 }
 
 class Mutation$SignIn$signIn {
@@ -528,10 +502,7 @@ class Mutation$SignIn$signIn {
   int get hashCode {
     final l$token = token;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$token,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$token, l$$__typename]);
   }
 
   @override
@@ -558,10 +529,7 @@ class Mutation$SignIn$signIn {
 
 extension UtilityExtension$Mutation$SignIn$signIn on Mutation$SignIn$signIn {
   CopyWith$Mutation$SignIn$signIn<Mutation$SignIn$signIn> get copyWith =>
-      CopyWith$Mutation$SignIn$signIn(
-        this,
-        (i) => i,
-      );
+      CopyWith$Mutation$SignIn$signIn(this, (i) => i);
 }
 
 abstract class CopyWith$Mutation$SignIn$signIn<TRes> {
@@ -573,18 +541,12 @@ abstract class CopyWith$Mutation$SignIn$signIn<TRes> {
   factory CopyWith$Mutation$SignIn$signIn.stub(TRes res) =
       _CopyWithStubImpl$Mutation$SignIn$signIn;
 
-  TRes call({
-    String? token,
-    String? $__typename,
-  });
+  TRes call({String? token, String? $__typename});
 }
 
 class _CopyWithImpl$Mutation$SignIn$signIn<TRes>
     implements CopyWith$Mutation$SignIn$signIn<TRes> {
-  _CopyWithImpl$Mutation$SignIn$signIn(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Mutation$SignIn$signIn(this._instance, this._then);
 
   final Mutation$SignIn$signIn _instance;
 
@@ -592,18 +554,17 @@ class _CopyWithImpl$Mutation$SignIn$signIn<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? token = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Mutation$SignIn$signIn(
-        token: token == _undefined || token == null
-            ? _instance.token
-            : (token as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? token = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Mutation$SignIn$signIn(
+          token: token == _undefined || token == null
+              ? _instance.token
+              : (token as String),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 }
 
 class _CopyWithStubImpl$Mutation$SignIn$signIn<TRes>
@@ -612,9 +573,5 @@ class _CopyWithStubImpl$Mutation$SignIn$signIn<TRes>
 
   TRes _res;
 
-  call({
-    String? token,
-    String? $__typename,
-  }) =>
-      _res;
+  call({String? token, String? $__typename}) => _res;
 }

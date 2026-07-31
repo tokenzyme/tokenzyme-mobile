@@ -19,7 +19,7 @@ extension WidgetExtensions on Widget {
         child: this,
       );
 
-  InkWell inkWell({
+  InkWell tappable({
     BorderRadius? borderRadius,
     ShapeBorder? customBorder,
     required VoidCallback? onPressed,

@@ -1,5 +1,6 @@
 import java.io.FileInputStream
 import java.util.Properties
+import org.jetbrains.kotlin.gradle.dsl.JvmTarget
 
 val releaseProperties = Properties().apply {
     val releasePropertiesFile = rootProject.file("release.properties")
@@ -23,10 +24,6 @@ android {
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
-    }
-
-    kotlinOptions {
-        jvmTarget = "17"
     }
 
     defaultConfig {
@@ -62,4 +59,12 @@ android {
 
 flutter {
     source = "../.."
+}
+
+// Kotlin 2.2 turned the old `kotlinOptions { jvmTarget = "17" }` DSL into a hard error.
+// This is its replacement, and it lives outside `android {}`.
+kotlin {
+    compilerOptions {
+        jvmTarget = JvmTarget.JVM_17
+    }
 }

@@ -6,20 +6,20 @@ import 'package:graphql_flutter/graphql_flutter.dart' as graphql_flutter;
 import 'schema.graphql.dart';
 
 class Variables$Mutation$CreateSignatureMessage {
-  factory Variables$Mutation$CreateSignatureMessage(
-          {required Input$CreateSignatureMessageInput input}) =>
-      Variables$Mutation$CreateSignatureMessage._({
-        r'input': input,
-      });
+  factory Variables$Mutation$CreateSignatureMessage({
+    required Input$CreateSignatureMessageInput input,
+  }) => Variables$Mutation$CreateSignatureMessage._({r'input': input});
 
   Variables$Mutation$CreateSignatureMessage._(this._$data);
 
   factory Variables$Mutation$CreateSignatureMessage.fromJson(
-      Map<String, dynamic> data) {
+    Map<String, dynamic> data,
+  ) {
     final result$data = <String, dynamic>{};
     final l$input = data['input'];
     result$data['input'] = Input$CreateSignatureMessageInput.fromJson(
-        (l$input as Map<String, dynamic>));
+      (l$input as Map<String, dynamic>),
+    );
     return Variables$Mutation$CreateSignatureMessage._(result$data);
   }
 
@@ -36,11 +36,10 @@ class Variables$Mutation$CreateSignatureMessage {
   }
 
   CopyWith$Variables$Mutation$CreateSignatureMessage<
-          Variables$Mutation$CreateSignatureMessage>
-      get copyWith => CopyWith$Variables$Mutation$CreateSignatureMessage(
-            this,
-            (i) => i,
-          );
+    Variables$Mutation$CreateSignatureMessage
+  >
+  get copyWith =>
+      CopyWith$Variables$Mutation$CreateSignatureMessage(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -91,12 +90,13 @@ class _CopyWithImpl$Variables$Mutation$CreateSignatureMessage<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? input = _undefined}) =>
-      _then(Variables$Mutation$CreateSignatureMessage._({
-        ..._instance._$data,
-        if (input != _undefined && input != null)
-          'input': (input as Input$CreateSignatureMessageInput),
-      }));
+  TRes call({Object? input = _undefined}) => _then(
+    Variables$Mutation$CreateSignatureMessage._({
+      ..._instance._$data,
+      if (input != _undefined && input != null)
+        'input': (input as Input$CreateSignatureMessageInput),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Mutation$CreateSignatureMessage<TRes>
@@ -120,13 +120,14 @@ class Mutation$CreateSignatureMessage {
     return Mutation$CreateSignatureMessage(
       createSignatureMessage:
           Mutation$CreateSignatureMessage$createSignatureMessage.fromJson(
-              (l$createSignatureMessage as Map<String, dynamic>)),
+            (l$createSignatureMessage as Map<String, dynamic>),
+          ),
       $__typename: (l$$__typename as String),
     );
   }
 
   final Mutation$CreateSignatureMessage$createSignatureMessage
-      createSignatureMessage;
+  createSignatureMessage;
 
   final String $__typename;
 
@@ -143,10 +144,7 @@ class Mutation$CreateSignatureMessage {
   int get hashCode {
     final l$createSignatureMessage = createSignatureMessage;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$createSignatureMessage,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$createSignatureMessage, l$$__typename]);
   }
 
   @override
@@ -175,10 +173,7 @@ class Mutation$CreateSignatureMessage {
 extension UtilityExtension$Mutation$CreateSignatureMessage
     on Mutation$CreateSignatureMessage {
   CopyWith$Mutation$CreateSignatureMessage<Mutation$CreateSignatureMessage>
-      get copyWith => CopyWith$Mutation$CreateSignatureMessage(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Mutation$CreateSignatureMessage(this, (i) => i);
 }
 
 abstract class CopyWith$Mutation$CreateSignatureMessage<TRes> {
@@ -192,19 +187,16 @@ abstract class CopyWith$Mutation$CreateSignatureMessage<TRes> {
 
   TRes call({
     Mutation$CreateSignatureMessage$createSignatureMessage?
-        createSignatureMessage,
+    createSignatureMessage,
     String? $__typename,
   });
   CopyWith$Mutation$CreateSignatureMessage$createSignatureMessage<TRes>
-      get createSignatureMessage;
+  get createSignatureMessage;
 }
 
 class _CopyWithImpl$Mutation$CreateSignatureMessage<TRes>
     implements CopyWith$Mutation$CreateSignatureMessage<TRes> {
-  _CopyWithImpl$Mutation$CreateSignatureMessage(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Mutation$CreateSignatureMessage(this._instance, this._then);
 
   final Mutation$CreateSignatureMessage _instance;
 
@@ -215,23 +207,26 @@ class _CopyWithImpl$Mutation$CreateSignatureMessage<TRes>
   TRes call({
     Object? createSignatureMessage = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Mutation$CreateSignatureMessage(
-        createSignatureMessage: createSignatureMessage == _undefined ||
-                createSignatureMessage == null
-            ? _instance.createSignatureMessage
-            : (createSignatureMessage
+  }) => _then(
+    Mutation$CreateSignatureMessage(
+      createSignatureMessage:
+          createSignatureMessage == _undefined || createSignatureMessage == null
+          ? _instance.createSignatureMessage
+          : (createSignatureMessage
                 as Mutation$CreateSignatureMessage$createSignatureMessage),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Mutation$CreateSignatureMessage$createSignatureMessage<TRes>
-      get createSignatureMessage {
+  get createSignatureMessage {
     final local$createSignatureMessage = _instance.createSignatureMessage;
     return CopyWith$Mutation$CreateSignatureMessage$createSignatureMessage(
-        local$createSignatureMessage, (e) => call(createSignatureMessage: e));
+      local$createSignatureMessage,
+      (e) => call(createSignatureMessage: e),
+    );
   }
 }
 
@@ -243,58 +238,71 @@ class _CopyWithStubImpl$Mutation$CreateSignatureMessage<TRes>
 
   call({
     Mutation$CreateSignatureMessage$createSignatureMessage?
-        createSignatureMessage,
+    createSignatureMessage,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Mutation$CreateSignatureMessage$createSignatureMessage<TRes>
-      get createSignatureMessage =>
-          CopyWith$Mutation$CreateSignatureMessage$createSignatureMessage.stub(
-              _res);
+  get createSignatureMessage =>
+      CopyWith$Mutation$CreateSignatureMessage$createSignatureMessage.stub(
+        _res,
+      );
 }
 
-const documentNodeMutationCreateSignatureMessage = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.mutation,
-    name: NameNode(value: 'CreateSignatureMessage'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'input')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'CreateSignatureMessageInput'),
-          isNonNull: true,
-        ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      )
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'createSignatureMessage'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'input'),
-            value: VariableNode(name: NameNode(value: 'input')),
-          )
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
-          FieldNode(
-            name: NameNode(value: 'id'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
+const documentNodeMutationCreateSignatureMessage = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.mutation,
+      name: NameNode(value: 'CreateSignatureMessage'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'input')),
+          type: NamedTypeNode(
+            name: NameNode(value: 'CreateSignatureMessageInput'),
+            isNonNull: true,
           ),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
+        ),
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'message'),
+            name: NameNode(value: 'createSignatureMessage'),
             alias: null,
-            arguments: [],
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'input'),
+                value: VariableNode(name: NameNode(value: 'input')),
+              ),
+            ],
             directives: [],
-            selectionSet: null,
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'id'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'message'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -303,26 +311,19 @@ const documentNodeMutationCreateSignatureMessage = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
-Mutation$CreateSignatureMessage _parserFn$Mutation$CreateSignatureMessage(
-        Map<String, dynamic> data) =>
-    Mutation$CreateSignatureMessage.fromJson(data);
-typedef OnMutationCompleted$Mutation$CreateSignatureMessage = FutureOr<void>
-    Function(
-  Map<String, dynamic>?,
-  Mutation$CreateSignatureMessage?,
+    ),
+  ],
 );
+Mutation$CreateSignatureMessage _parserFn$Mutation$CreateSignatureMessage(
+  Map<String, dynamic> data,
+) => Mutation$CreateSignatureMessage.fromJson(data);
+typedef OnMutationCompleted$Mutation$CreateSignatureMessage =
+    FutureOr<void> Function(
+      Map<String, dynamic>?,
+      Mutation$CreateSignatureMessage?,
+    );
 
 class Options$Mutation$CreateSignatureMessage
     extends graphql.MutationOptions<Mutation$CreateSignatureMessage> {
@@ -338,39 +339,39 @@ class Options$Mutation$CreateSignatureMessage
     OnMutationCompleted$Mutation$CreateSignatureMessage? onCompleted,
     graphql.OnMutationUpdate<Mutation$CreateSignatureMessage>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Mutation$CreateSignatureMessage(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationCreateSignatureMessage,
-          parserFn: _parserFn$Mutation$CreateSignatureMessage,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Mutation$CreateSignatureMessage(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationCreateSignatureMessage,
+         parserFn: _parserFn$Mutation$CreateSignatureMessage,
+       );
 
   final OnMutationCompleted$Mutation$CreateSignatureMessage?
-      onCompletedWithParsed;
+  onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
 class WatchOptions$Mutation$CreateSignatureMessage
@@ -389,63 +390,63 @@ class WatchOptions$Mutation$CreateSignatureMessage
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeMutationCreateSignatureMessage,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Mutation$CreateSignatureMessage,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeMutationCreateSignatureMessage,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Mutation$CreateSignatureMessage,
+       );
 }
 
 extension ClientExtension$Mutation$CreateSignatureMessage
     on graphql.GraphQLClient {
   Future<graphql.QueryResult<Mutation$CreateSignatureMessage>>
-      mutate$CreateSignatureMessage(
-              Options$Mutation$CreateSignatureMessage options) async =>
-          await this.mutate(options);
+  mutate$CreateSignatureMessage(
+    Options$Mutation$CreateSignatureMessage options,
+  ) async => await this.mutate(options);
+
   graphql.ObservableQuery<Mutation$CreateSignatureMessage>
-      watchMutation$CreateSignatureMessage(
-              WatchOptions$Mutation$CreateSignatureMessage options) =>
-          this.watchMutation(options);
+  watchMutation$CreateSignatureMessage(
+    WatchOptions$Mutation$CreateSignatureMessage options,
+  ) => this.watchMutation(options);
 }
 
 class Mutation$CreateSignatureMessage$HookResult {
-  Mutation$CreateSignatureMessage$HookResult(
-    this.runMutation,
-    this.result,
-  );
+  Mutation$CreateSignatureMessage$HookResult(this.runMutation, this.result);
 
   final RunMutation$Mutation$CreateSignatureMessage runMutation;
 
   final graphql.QueryResult<Mutation$CreateSignatureMessage> result;
 }
 
-Mutation$CreateSignatureMessage$HookResult useMutation$CreateSignatureMessage(
-    [WidgetOptions$Mutation$CreateSignatureMessage? options]) {
-  final result = graphql_flutter
-      .useMutation(options ?? WidgetOptions$Mutation$CreateSignatureMessage());
+Mutation$CreateSignatureMessage$HookResult useMutation$CreateSignatureMessage([
+  WidgetOptions$Mutation$CreateSignatureMessage? options,
+]) {
+  final result = graphql_flutter.useMutation(
+    options ?? WidgetOptions$Mutation$CreateSignatureMessage(),
+  );
   return Mutation$CreateSignatureMessage$HookResult(
     (variables, {optimisticResult, typedOptimisticResult}) =>
         result.runMutation(
-      variables.toJson(),
-      optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-    ),
+          variables.toJson(),
+          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+        ),
     result.result,
   );
 }
 
 graphql.ObservableQuery<Mutation$CreateSignatureMessage>
-    useWatchMutation$CreateSignatureMessage(
-            WatchOptions$Mutation$CreateSignatureMessage options) =>
-        graphql_flutter.useWatchMutation(options);
+useWatchMutation$CreateSignatureMessage(
+  WatchOptions$Mutation$CreateSignatureMessage options,
+) => graphql_flutter.useWatchMutation(options);
 
 class WidgetOptions$Mutation$CreateSignatureMessage
     extends graphql.MutationOptions<Mutation$CreateSignatureMessage> {
@@ -460,50 +461,51 @@ class WidgetOptions$Mutation$CreateSignatureMessage
     OnMutationCompleted$Mutation$CreateSignatureMessage? onCompleted,
     graphql.OnMutationUpdate<Mutation$CreateSignatureMessage>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Mutation$CreateSignatureMessage(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationCreateSignatureMessage,
-          parserFn: _parserFn$Mutation$CreateSignatureMessage,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Mutation$CreateSignatureMessage(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationCreateSignatureMessage,
+         parserFn: _parserFn$Mutation$CreateSignatureMessage,
+       );
 
   final OnMutationCompleted$Mutation$CreateSignatureMessage?
-      onCompletedWithParsed;
+  onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
-typedef RunMutation$Mutation$CreateSignatureMessage
-    = graphql.MultiSourceResult<Mutation$CreateSignatureMessage> Function(
-  Variables$Mutation$CreateSignatureMessage, {
-  Object? optimisticResult,
-  Mutation$CreateSignatureMessage? typedOptimisticResult,
-});
-typedef Builder$Mutation$CreateSignatureMessage = widgets.Widget Function(
-  RunMutation$Mutation$CreateSignatureMessage,
-  graphql.QueryResult<Mutation$CreateSignatureMessage>?,
-);
+typedef RunMutation$Mutation$CreateSignatureMessage =
+    graphql.MultiSourceResult<Mutation$CreateSignatureMessage> Function(
+      Variables$Mutation$CreateSignatureMessage, {
+      Object? optimisticResult,
+      Mutation$CreateSignatureMessage? typedOptimisticResult,
+    });
+typedef Builder$Mutation$CreateSignatureMessage =
+    widgets.Widget Function(
+      RunMutation$Mutation$CreateSignatureMessage,
+      graphql.QueryResult<Mutation$CreateSignatureMessage>?,
+    );
 
 class Mutation$CreateSignatureMessage$Widget
     extends graphql_flutter.Mutation<Mutation$CreateSignatureMessage> {
@@ -512,26 +514,17 @@ class Mutation$CreateSignatureMessage$Widget
     WidgetOptions$Mutation$CreateSignatureMessage? options,
     required Builder$Mutation$CreateSignatureMessage builder,
   }) : super(
-          key: key,
-          options: options ?? WidgetOptions$Mutation$CreateSignatureMessage(),
-          builder: (
-            run,
-            result,
-          ) =>
-              builder(
-            (
-              variables, {
-              optimisticResult,
-              typedOptimisticResult,
-            }) =>
-                run(
-              variables.toJson(),
-              optimisticResult:
-                  optimisticResult ?? typedOptimisticResult?.toJson(),
-            ),
-            result,
-          ),
-        );
+         key: key,
+         options: options ?? WidgetOptions$Mutation$CreateSignatureMessage(),
+         builder: (run, result) => builder(
+           (variables, {optimisticResult, typedOptimisticResult}) => run(
+             variables.toJson(),
+             optimisticResult:
+                 optimisticResult ?? typedOptimisticResult?.toJson(),
+           ),
+           result,
+         ),
+       );
 }
 
 class Mutation$CreateSignatureMessage$createSignatureMessage {
@@ -542,7 +535,8 @@ class Mutation$CreateSignatureMessage$createSignatureMessage {
   });
 
   factory Mutation$CreateSignatureMessage$createSignatureMessage.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$id = json['id'];
     final l$message = json['message'];
     final l$$__typename = json['__typename'];
@@ -575,11 +569,7 @@ class Mutation$CreateSignatureMessage$createSignatureMessage {
     final l$id = id;
     final l$message = message;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$id,
-      l$message,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$id, l$message, l$$__typename]);
   }
 
   @override
@@ -613,30 +603,28 @@ class Mutation$CreateSignatureMessage$createSignatureMessage {
 extension UtilityExtension$Mutation$CreateSignatureMessage$createSignatureMessage
     on Mutation$CreateSignatureMessage$createSignatureMessage {
   CopyWith$Mutation$CreateSignatureMessage$createSignatureMessage<
-          Mutation$CreateSignatureMessage$createSignatureMessage>
-      get copyWith =>
-          CopyWith$Mutation$CreateSignatureMessage$createSignatureMessage(
-            this,
-            (i) => i,
-          );
+    Mutation$CreateSignatureMessage$createSignatureMessage
+  >
+  get copyWith =>
+      CopyWith$Mutation$CreateSignatureMessage$createSignatureMessage(
+        this,
+        (i) => i,
+      );
 }
 
 abstract class CopyWith$Mutation$CreateSignatureMessage$createSignatureMessage<
-    TRes> {
+  TRes
+> {
   factory CopyWith$Mutation$CreateSignatureMessage$createSignatureMessage(
     Mutation$CreateSignatureMessage$createSignatureMessage instance,
     TRes Function(Mutation$CreateSignatureMessage$createSignatureMessage) then,
   ) = _CopyWithImpl$Mutation$CreateSignatureMessage$createSignatureMessage;
 
   factory CopyWith$Mutation$CreateSignatureMessage$createSignatureMessage.stub(
-          TRes res) =
-      _CopyWithStubImpl$Mutation$CreateSignatureMessage$createSignatureMessage;
+    TRes res,
+  ) = _CopyWithStubImpl$Mutation$CreateSignatureMessage$createSignatureMessage;
 
-  TRes call({
-    String? id,
-    String? message,
-    String? $__typename,
-  });
+  TRes call({String? id, String? message, String? $__typename});
 }
 
 class _CopyWithImpl$Mutation$CreateSignatureMessage$createSignatureMessage<TRes>
@@ -650,7 +638,7 @@ class _CopyWithImpl$Mutation$CreateSignatureMessage$createSignatureMessage<TRes>
   final Mutation$CreateSignatureMessage$createSignatureMessage _instance;
 
   final TRes Function(Mutation$CreateSignatureMessage$createSignatureMessage)
-      _then;
+  _then;
 
   static const _undefined = <dynamic, dynamic>{};
 
@@ -658,31 +646,29 @@ class _CopyWithImpl$Mutation$CreateSignatureMessage$createSignatureMessage<TRes>
     Object? id = _undefined,
     Object? message = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Mutation$CreateSignatureMessage$createSignatureMessage(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        message: message == _undefined || message == null
-            ? _instance.message
-            : (message as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Mutation$CreateSignatureMessage$createSignatureMessage(
+      id: id == _undefined || id == null ? _instance.id : (id as String),
+      message: message == _undefined || message == null
+          ? _instance.message
+          : (message as String),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Mutation$CreateSignatureMessage$createSignatureMessage<
-        TRes>
+  TRes
+>
     implements
         CopyWith$Mutation$CreateSignatureMessage$createSignatureMessage<TRes> {
   _CopyWithStubImpl$Mutation$CreateSignatureMessage$createSignatureMessage(
-      this._res);
+    this._res,
+  );
 
   TRes _res;
 
-  call({
-    String? id,
-    String? message,
-    String? $__typename,
-  }) =>
-      _res;
+  call({String? id, String? message, String? $__typename}) => _res;
 }

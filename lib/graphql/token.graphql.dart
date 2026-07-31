@@ -18,7 +18,8 @@ class Query$GetTokenLogoUploadUrl {
     return Query$GetTokenLogoUploadUrl(
       tokenLogoUploadUrl:
           Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl.fromJson(
-              (l$tokenLogoUploadUrl as Map<String, dynamic>)),
+            (l$tokenLogoUploadUrl as Map<String, dynamic>),
+          ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -40,10 +41,7 @@ class Query$GetTokenLogoUploadUrl {
   int get hashCode {
     final l$tokenLogoUploadUrl = tokenLogoUploadUrl;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$tokenLogoUploadUrl,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$tokenLogoUploadUrl, l$$__typename]);
   }
 
   @override
@@ -72,10 +70,7 @@ class Query$GetTokenLogoUploadUrl {
 extension UtilityExtension$Query$GetTokenLogoUploadUrl
     on Query$GetTokenLogoUploadUrl {
   CopyWith$Query$GetTokenLogoUploadUrl<Query$GetTokenLogoUploadUrl>
-      get copyWith => CopyWith$Query$GetTokenLogoUploadUrl(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Query$GetTokenLogoUploadUrl(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetTokenLogoUploadUrl<TRes> {
@@ -92,15 +87,12 @@ abstract class CopyWith$Query$GetTokenLogoUploadUrl<TRes> {
     String? $__typename,
   });
   CopyWith$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl<TRes>
-      get tokenLogoUploadUrl;
+  get tokenLogoUploadUrl;
 }
 
 class _CopyWithImpl$Query$GetTokenLogoUploadUrl<TRes>
     implements CopyWith$Query$GetTokenLogoUploadUrl<TRes> {
-  _CopyWithImpl$Query$GetTokenLogoUploadUrl(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetTokenLogoUploadUrl(this._instance, this._then);
 
   final Query$GetTokenLogoUploadUrl _instance;
 
@@ -111,23 +103,26 @@ class _CopyWithImpl$Query$GetTokenLogoUploadUrl<TRes>
   TRes call({
     Object? tokenLogoUploadUrl = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetTokenLogoUploadUrl(
-        tokenLogoUploadUrl:
-            tokenLogoUploadUrl == _undefined || tokenLogoUploadUrl == null
-                ? _instance.tokenLogoUploadUrl
-                : (tokenLogoUploadUrl
-                    as Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$GetTokenLogoUploadUrl(
+      tokenLogoUploadUrl:
+          tokenLogoUploadUrl == _undefined || tokenLogoUploadUrl == null
+          ? _instance.tokenLogoUploadUrl
+          : (tokenLogoUploadUrl
+                as Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl<TRes>
-      get tokenLogoUploadUrl {
+  get tokenLogoUploadUrl {
     final local$tokenLogoUploadUrl = _instance.tokenLogoUploadUrl;
     return CopyWith$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl(
-        local$tokenLogoUploadUrl, (e) => call(tokenLogoUploadUrl: e));
+      local$tokenLogoUploadUrl,
+      (e) => call(tokenLogoUploadUrl: e),
+    );
   }
 }
 
@@ -140,40 +135,52 @@ class _CopyWithStubImpl$Query$GetTokenLogoUploadUrl<TRes>
   call({
     Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl? tokenLogoUploadUrl,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl<TRes>
-      get tokenLogoUploadUrl =>
-          CopyWith$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl.stub(_res);
+  get tokenLogoUploadUrl =>
+      CopyWith$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl.stub(_res);
 }
 
-const documentNodeQueryGetTokenLogoUploadUrl = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'GetTokenLogoUploadUrl'),
-    variableDefinitions: [],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'tokenLogoUploadUrl'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+const documentNodeQueryGetTokenLogoUploadUrl = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'GetTokenLogoUploadUrl'),
+      variableDefinitions: [],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'uploadUrl'),
+            name: NameNode(value: 'tokenLogoUploadUrl'),
             alias: null,
             arguments: [],
             directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'cdnUrl'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'uploadUrl'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'cdnUrl'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -182,25 +189,19 @@ const documentNodeQueryGetTokenLogoUploadUrl = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
-Query$GetTokenLogoUploadUrl _parserFn$Query$GetTokenLogoUploadUrl(
-        Map<String, dynamic> data) =>
-    Query$GetTokenLogoUploadUrl.fromJson(data);
-typedef OnQueryComplete$Query$GetTokenLogoUploadUrl = FutureOr<void> Function(
-  Map<String, dynamic>?,
-  Query$GetTokenLogoUploadUrl?,
+    ),
+  ],
 );
+Query$GetTokenLogoUploadUrl _parserFn$Query$GetTokenLogoUploadUrl(
+  Map<String, dynamic> data,
+) => Query$GetTokenLogoUploadUrl.fromJson(data);
+typedef OnQueryComplete$Query$GetTokenLogoUploadUrl =
+    FutureOr<void> Function(
+      Map<String, dynamic>?,
+      Query$GetTokenLogoUploadUrl?,
+    );
 
 class Options$Query$GetTokenLogoUploadUrl
     extends graphql.QueryOptions<Query$GetTokenLogoUploadUrl> {
@@ -215,37 +216,37 @@ class Options$Query$GetTokenLogoUploadUrl
     graphql.Context? context,
     OnQueryComplete$Query$GetTokenLogoUploadUrl? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Query$GetTokenLogoUploadUrl(data),
-                  ),
-          onError: onError,
-          document: documentNodeQueryGetTokenLogoUploadUrl,
-          parserFn: _parserFn$Query$GetTokenLogoUploadUrl,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null
+                     ? null
+                     : _parserFn$Query$GetTokenLogoUploadUrl(data),
+               ),
+         onError: onError,
+         document: documentNodeQueryGetTokenLogoUploadUrl,
+         parserFn: _parserFn$Query$GetTokenLogoUploadUrl,
+       );
 
   final OnQueryComplete$Query$GetTokenLogoUploadUrl? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$GetTokenLogoUploadUrl
@@ -263,57 +264,65 @@ class WatchOptions$Query$GetTokenLogoUploadUrl
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQueryGetTokenLogoUploadUrl,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$GetTokenLogoUploadUrl,
-        );
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQueryGetTokenLogoUploadUrl,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$GetTokenLogoUploadUrl,
+       );
 }
 
 class FetchMoreOptions$Query$GetTokenLogoUploadUrl
     extends graphql.FetchMoreOptions {
-  FetchMoreOptions$Query$GetTokenLogoUploadUrl(
-      {required graphql.UpdateQuery updateQuery})
-      : super(
-          updateQuery: updateQuery,
-          document: documentNodeQueryGetTokenLogoUploadUrl,
-        );
+  FetchMoreOptions$Query$GetTokenLogoUploadUrl({
+    required graphql.UpdateQuery updateQuery,
+  }) : super(
+         updateQuery: updateQuery,
+         document: documentNodeQueryGetTokenLogoUploadUrl,
+       );
 }
 
 extension ClientExtension$Query$GetTokenLogoUploadUrl on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetTokenLogoUploadUrl>>
-      query$GetTokenLogoUploadUrl(
-              [Options$Query$GetTokenLogoUploadUrl? options]) async =>
-          await this.query(options ?? Options$Query$GetTokenLogoUploadUrl());
-  graphql.ObservableQuery<
-      Query$GetTokenLogoUploadUrl> watchQuery$GetTokenLogoUploadUrl(
-          [WatchOptions$Query$GetTokenLogoUploadUrl? options]) =>
-      this.watchQuery(options ?? WatchOptions$Query$GetTokenLogoUploadUrl());
+  query$GetTokenLogoUploadUrl([
+    Options$Query$GetTokenLogoUploadUrl? options,
+  ]) async =>
+      await this.query(options ?? Options$Query$GetTokenLogoUploadUrl());
+
+  graphql.ObservableQuery<Query$GetTokenLogoUploadUrl>
+  watchQuery$GetTokenLogoUploadUrl([
+    WatchOptions$Query$GetTokenLogoUploadUrl? options,
+  ]) => this.watchQuery(options ?? WatchOptions$Query$GetTokenLogoUploadUrl());
+
   void writeQuery$GetTokenLogoUploadUrl({
     required Query$GetTokenLogoUploadUrl data,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-            operation: graphql.Operation(
-                document: documentNodeQueryGetTokenLogoUploadUrl)),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
-  Query$GetTokenLogoUploadUrl? readQuery$GetTokenLogoUploadUrl(
-      {bool optimistic = true}) {
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(
+        document: documentNodeQueryGetTokenLogoUploadUrl,
+      ),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
+
+  Query$GetTokenLogoUploadUrl? readQuery$GetTokenLogoUploadUrl({
+    bool optimistic = true,
+  }) {
     final result = this.readQuery(
       graphql.Request(
-          operation: graphql.Operation(
-              document: documentNodeQueryGetTokenLogoUploadUrl)),
+        operation: graphql.Operation(
+          document: documentNodeQueryGetTokenLogoUploadUrl,
+        ),
+      ),
       optimistic: optimistic,
     );
     return result == null ? null : Query$GetTokenLogoUploadUrl.fromJson(result);
@@ -321,15 +330,16 @@ extension ClientExtension$Query$GetTokenLogoUploadUrl on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$GetTokenLogoUploadUrl>
-    useQuery$GetTokenLogoUploadUrl(
-            [Options$Query$GetTokenLogoUploadUrl? options]) =>
-        graphql_flutter
-            .useQuery(options ?? Options$Query$GetTokenLogoUploadUrl());
+useQuery$GetTokenLogoUploadUrl([
+  Options$Query$GetTokenLogoUploadUrl? options,
+]) =>
+    graphql_flutter.useQuery(options ?? Options$Query$GetTokenLogoUploadUrl());
 graphql.ObservableQuery<Query$GetTokenLogoUploadUrl>
-    useWatchQuery$GetTokenLogoUploadUrl(
-            [WatchOptions$Query$GetTokenLogoUploadUrl? options]) =>
-        graphql_flutter.useWatchQuery(
-            options ?? WatchOptions$Query$GetTokenLogoUploadUrl());
+useWatchQuery$GetTokenLogoUploadUrl([
+  WatchOptions$Query$GetTokenLogoUploadUrl? options,
+]) => graphql_flutter.useWatchQuery(
+  options ?? WatchOptions$Query$GetTokenLogoUploadUrl(),
+);
 
 class Query$GetTokenLogoUploadUrl$Widget
     extends graphql_flutter.Query<Query$GetTokenLogoUploadUrl> {
@@ -338,10 +348,10 @@ class Query$GetTokenLogoUploadUrl$Widget
     Options$Query$GetTokenLogoUploadUrl? options,
     required graphql_flutter.QueryBuilder<Query$GetTokenLogoUploadUrl> builder,
   }) : super(
-          key: key,
-          options: options ?? Options$Query$GetTokenLogoUploadUrl(),
-          builder: builder,
-        );
+         key: key,
+         options: options ?? Options$Query$GetTokenLogoUploadUrl(),
+         builder: builder,
+       );
 }
 
 class Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl {
@@ -352,7 +362,8 @@ class Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl {
   });
 
   factory Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl.fromJson(
-      Map<String, dynamic> json) {
+    Map<String, dynamic> json,
+  ) {
     final l$uploadUrl = json['uploadUrl'];
     final l$cdnUrl = json['cdnUrl'];
     final l$$__typename = json['__typename'];
@@ -385,11 +396,7 @@ class Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl {
     final l$uploadUrl = uploadUrl;
     final l$cdnUrl = cdnUrl;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$uploadUrl,
-      l$cdnUrl,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$uploadUrl, l$cdnUrl, l$$__typename]);
   }
 
   @override
@@ -423,11 +430,10 @@ class Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl {
 extension UtilityExtension$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl
     on Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl {
   CopyWith$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl<
-          Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl>
-      get copyWith => CopyWith$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl(
-            this,
-            (i) => i,
-          );
+    Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl
+  >
+  get copyWith =>
+      CopyWith$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl<TRes> {
@@ -437,14 +443,10 @@ abstract class CopyWith$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl<TRes> {
   ) = _CopyWithImpl$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl;
 
   factory CopyWith$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl.stub(
-          TRes res) =
-      _CopyWithStubImpl$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl;
+    TRes res,
+  ) = _CopyWithStubImpl$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl;
 
-  TRes call({
-    String? uploadUrl,
-    String? cdnUrl,
-    String? $__typename,
-  });
+  TRes call({String? uploadUrl, String? cdnUrl, String? $__typename});
 }
 
 class _CopyWithImpl$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl<TRes>
@@ -464,18 +466,19 @@ class _CopyWithImpl$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl<TRes>
     Object? uploadUrl = _undefined,
     Object? cdnUrl = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl(
-        uploadUrl: uploadUrl == _undefined || uploadUrl == null
-            ? _instance.uploadUrl
-            : (uploadUrl as String),
-        cdnUrl: cdnUrl == _undefined || cdnUrl == null
-            ? _instance.cdnUrl
-            : (cdnUrl as String),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl(
+      uploadUrl: uploadUrl == _undefined || uploadUrl == null
+          ? _instance.uploadUrl
+          : (uploadUrl as String),
+      cdnUrl: cdnUrl == _undefined || cdnUrl == null
+          ? _instance.cdnUrl
+          : (cdnUrl as String),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl<TRes>
@@ -484,24 +487,18 @@ class _CopyWithStubImpl$Query$GetTokenLogoUploadUrl$tokenLogoUploadUrl<TRes>
 
   TRes _res;
 
-  call({
-    String? uploadUrl,
-    String? cdnUrl,
-    String? $__typename,
-  }) =>
-      _res;
+  call({String? uploadUrl, String? cdnUrl, String? $__typename}) => _res;
 }
 
 class Variables$Query$IsTokenRegistered {
   factory Variables$Query$IsTokenRegistered({required String address}) =>
-      Variables$Query$IsTokenRegistered._({
-        r'address': address,
-      });
+      Variables$Query$IsTokenRegistered._({r'address': address});
 
   Variables$Query$IsTokenRegistered._(this._$data);
 
   factory Variables$Query$IsTokenRegistered.fromJson(
-      Map<String, dynamic> data) {
+    Map<String, dynamic> data,
+  ) {
     final result$data = <String, dynamic>{};
     final l$address = data['address'];
     result$data['address'] = (l$address as String);
@@ -520,10 +517,7 @@ class Variables$Query$IsTokenRegistered {
   }
 
   CopyWith$Variables$Query$IsTokenRegistered<Variables$Query$IsTokenRegistered>
-      get copyWith => CopyWith$Variables$Query$IsTokenRegistered(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Variables$Query$IsTokenRegistered(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -563,10 +557,7 @@ abstract class CopyWith$Variables$Query$IsTokenRegistered<TRes> {
 
 class _CopyWithImpl$Variables$Query$IsTokenRegistered<TRes>
     implements CopyWith$Variables$Query$IsTokenRegistered<TRes> {
-  _CopyWithImpl$Variables$Query$IsTokenRegistered(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$IsTokenRegistered(this._instance, this._then);
 
   final Variables$Query$IsTokenRegistered _instance;
 
@@ -574,12 +565,13 @@ class _CopyWithImpl$Variables$Query$IsTokenRegistered<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? address = _undefined}) =>
-      _then(Variables$Query$IsTokenRegistered._({
-        ..._instance._$data,
-        if (address != _undefined && address != null)
-          'address': (address as String),
-      }));
+  TRes call({Object? address = _undefined}) => _then(
+    Variables$Query$IsTokenRegistered._({
+      ..._instance._$data,
+      if (address != _undefined && address != null)
+        'address': (address as String),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$IsTokenRegistered<TRes>
@@ -623,10 +615,7 @@ class Query$IsTokenRegistered {
   int get hashCode {
     final l$isTokenRegistered = isTokenRegistered;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$isTokenRegistered,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$isTokenRegistered, l$$__typename]);
   }
 
   @override
@@ -653,10 +642,7 @@ class Query$IsTokenRegistered {
 
 extension UtilityExtension$Query$IsTokenRegistered on Query$IsTokenRegistered {
   CopyWith$Query$IsTokenRegistered<Query$IsTokenRegistered> get copyWith =>
-      CopyWith$Query$IsTokenRegistered(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$IsTokenRegistered(this, (i) => i);
 }
 
 abstract class CopyWith$Query$IsTokenRegistered<TRes> {
@@ -668,18 +654,12 @@ abstract class CopyWith$Query$IsTokenRegistered<TRes> {
   factory CopyWith$Query$IsTokenRegistered.stub(TRes res) =
       _CopyWithStubImpl$Query$IsTokenRegistered;
 
-  TRes call({
-    bool? isTokenRegistered,
-    String? $__typename,
-  });
+  TRes call({bool? isTokenRegistered, String? $__typename});
 }
 
 class _CopyWithImpl$Query$IsTokenRegistered<TRes>
     implements CopyWith$Query$IsTokenRegistered<TRes> {
-  _CopyWithImpl$Query$IsTokenRegistered(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$IsTokenRegistered(this._instance, this._then);
 
   final Query$IsTokenRegistered _instance;
 
@@ -690,16 +670,17 @@ class _CopyWithImpl$Query$IsTokenRegistered<TRes>
   TRes call({
     Object? isTokenRegistered = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$IsTokenRegistered(
-        isTokenRegistered:
-            isTokenRegistered == _undefined || isTokenRegistered == null
-                ? _instance.isTokenRegistered
-                : (isTokenRegistered as bool),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$IsTokenRegistered(
+      isTokenRegistered:
+          isTokenRegistered == _undefined || isTokenRegistered == null
+          ? _instance.isTokenRegistered
+          : (isTokenRegistered as bool),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Query$IsTokenRegistered<TRes>
@@ -708,59 +689,54 @@ class _CopyWithStubImpl$Query$IsTokenRegistered<TRes>
 
   TRes _res;
 
-  call({
-    bool? isTokenRegistered,
-    String? $__typename,
-  }) =>
-      _res;
+  call({bool? isTokenRegistered, String? $__typename}) => _res;
 }
 
-const documentNodeQueryIsTokenRegistered = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'IsTokenRegistered'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'address')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: true,
+const documentNodeQueryIsTokenRegistered = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'IsTokenRegistered'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'address')),
+          type: NamedTypeNode(name: NameNode(value: 'String'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      )
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'isTokenRegistered'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'address'),
-            value: VariableNode(name: NameNode(value: 'address')),
-          )
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
+          FieldNode(
+            name: NameNode(value: 'isTokenRegistered'),
+            alias: null,
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'address'),
+                value: VariableNode(name: NameNode(value: 'address')),
+              ),
+            ],
+            directives: [],
+            selectionSet: null,
+          ),
+          FieldNode(
+            name: NameNode(value: '__typename'),
+            alias: null,
+            arguments: [],
+            directives: [],
+            selectionSet: null,
+          ),
         ],
-        directives: [],
-        selectionSet: null,
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
-Query$IsTokenRegistered _parserFn$Query$IsTokenRegistered(
-        Map<String, dynamic> data) =>
-    Query$IsTokenRegistered.fromJson(data);
-typedef OnQueryComplete$Query$IsTokenRegistered = FutureOr<void> Function(
-  Map<String, dynamic>?,
-  Query$IsTokenRegistered?,
+    ),
+  ],
 );
+Query$IsTokenRegistered _parserFn$Query$IsTokenRegistered(
+  Map<String, dynamic> data,
+) => Query$IsTokenRegistered.fromJson(data);
+typedef OnQueryComplete$Query$IsTokenRegistered =
+    FutureOr<void> Function(Map<String, dynamic>?, Query$IsTokenRegistered?);
 
 class Options$Query$IsTokenRegistered
     extends graphql.QueryOptions<Query$IsTokenRegistered> {
@@ -776,38 +752,36 @@ class Options$Query$IsTokenRegistered
     graphql.Context? context,
     OnQueryComplete$Query$IsTokenRegistered? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null
-                        ? null
-                        : _parserFn$Query$IsTokenRegistered(data),
-                  ),
-          onError: onError,
-          document: documentNodeQueryIsTokenRegistered,
-          parserFn: _parserFn$Query$IsTokenRegistered,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$IsTokenRegistered(data),
+               ),
+         onError: onError,
+         document: documentNodeQueryIsTokenRegistered,
+         parserFn: _parserFn$Query$IsTokenRegistered,
+       );
 
   final OnQueryComplete$Query$IsTokenRegistered? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$IsTokenRegistered
@@ -826,20 +800,20 @@ class WatchOptions$Query$IsTokenRegistered
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQueryIsTokenRegistered,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$IsTokenRegistered,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQueryIsTokenRegistered,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$IsTokenRegistered,
+       );
 }
 
 class FetchMoreOptions$Query$IsTokenRegistered
@@ -848,41 +822,45 @@ class FetchMoreOptions$Query$IsTokenRegistered
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$IsTokenRegistered variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQueryIsTokenRegistered,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQueryIsTokenRegistered,
+       );
 }
 
 extension ClientExtension$Query$IsTokenRegistered on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$IsTokenRegistered>> query$IsTokenRegistered(
-          Options$Query$IsTokenRegistered options) async =>
-      await this.query(options);
+    Options$Query$IsTokenRegistered options,
+  ) async => await this.query(options);
+
   graphql.ObservableQuery<Query$IsTokenRegistered> watchQuery$IsTokenRegistered(
-          WatchOptions$Query$IsTokenRegistered options) =>
-      this.watchQuery(options);
+    WatchOptions$Query$IsTokenRegistered options,
+  ) => this.watchQuery(options);
+
   void writeQuery$IsTokenRegistered({
     required Query$IsTokenRegistered data,
     required Variables$Query$IsTokenRegistered variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation:
-              graphql.Operation(document: documentNodeQueryIsTokenRegistered),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(
+        document: documentNodeQueryIsTokenRegistered,
+      ),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
+
   Query$IsTokenRegistered? readQuery$IsTokenRegistered({
     required Variables$Query$IsTokenRegistered variables,
     bool optimistic = true,
   }) {
     final result = this.readQuery(
       graphql.Request(
-        operation:
-            graphql.Operation(document: documentNodeQueryIsTokenRegistered),
+        operation: graphql.Operation(
+          document: documentNodeQueryIsTokenRegistered,
+        ),
         variables: variables.toJson(),
       ),
       optimistic: optimistic,
@@ -892,12 +870,11 @@ extension ClientExtension$Query$IsTokenRegistered on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$IsTokenRegistered>
-    useQuery$IsTokenRegistered(Options$Query$IsTokenRegistered options) =>
-        graphql_flutter.useQuery(options);
+useQuery$IsTokenRegistered(Options$Query$IsTokenRegistered options) =>
+    graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$IsTokenRegistered>
-    useWatchQuery$IsTokenRegistered(
-            WatchOptions$Query$IsTokenRegistered options) =>
-        graphql_flutter.useWatchQuery(options);
+useWatchQuery$IsTokenRegistered(WatchOptions$Query$IsTokenRegistered options) =>
+    graphql_flutter.useWatchQuery(options);
 
 class Query$IsTokenRegistered$Widget
     extends graphql_flutter.Query<Query$IsTokenRegistered> {
@@ -905,18 +882,12 @@ class Query$IsTokenRegistered$Widget
     widgets.Key? key,
     required Options$Query$IsTokenRegistered options,
     required graphql_flutter.QueryBuilder<Query$IsTokenRegistered> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Variables$Query$GetToken {
   factory Variables$Query$GetToken({required String address}) =>
-      Variables$Query$GetToken._({
-        r'address': address,
-      });
+      Variables$Query$GetToken._({r'address': address});
 
   Variables$Query$GetToken._(this._$data);
 
@@ -939,10 +910,7 @@ class Variables$Query$GetToken {
   }
 
   CopyWith$Variables$Query$GetToken<Variables$Query$GetToken> get copyWith =>
-      CopyWith$Variables$Query$GetToken(
-        this,
-        (i) => i,
-      );
+      CopyWith$Variables$Query$GetToken(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -982,10 +950,7 @@ abstract class CopyWith$Variables$Query$GetToken<TRes> {
 
 class _CopyWithImpl$Variables$Query$GetToken<TRes>
     implements CopyWith$Variables$Query$GetToken<TRes> {
-  _CopyWithImpl$Variables$Query$GetToken(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$GetToken(this._instance, this._then);
 
   final Variables$Query$GetToken _instance;
 
@@ -993,12 +958,13 @@ class _CopyWithImpl$Variables$Query$GetToken<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? address = _undefined}) =>
-      _then(Variables$Query$GetToken._({
-        ..._instance._$data,
-        if (address != _undefined && address != null)
-          'address': (address as String),
-      }));
+  TRes call({Object? address = _undefined}) => _then(
+    Variables$Query$GetToken._({
+      ..._instance._$data,
+      if (address != _undefined && address != null)
+        'address': (address as String),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$GetToken<TRes>
@@ -1011,10 +977,7 @@ class _CopyWithStubImpl$Variables$Query$GetToken<TRes>
 }
 
 class Query$GetToken {
-  Query$GetToken({
-    required this.token,
-    this.$__typename = 'Query',
-  });
+  Query$GetToken({required this.token, this.$__typename = 'Query'});
 
   factory Query$GetToken.fromJson(Map<String, dynamic> json) {
     final l$token = json['token'];
@@ -1042,10 +1005,7 @@ class Query$GetToken {
   int get hashCode {
     final l$token = token;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$token,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$token, l$$__typename]);
   }
 
   @override
@@ -1072,10 +1032,7 @@ class Query$GetToken {
 
 extension UtilityExtension$Query$GetToken on Query$GetToken {
   CopyWith$Query$GetToken<Query$GetToken> get copyWith =>
-      CopyWith$Query$GetToken(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$GetToken(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetToken<TRes> {
@@ -1087,19 +1044,13 @@ abstract class CopyWith$Query$GetToken<TRes> {
   factory CopyWith$Query$GetToken.stub(TRes res) =
       _CopyWithStubImpl$Query$GetToken;
 
-  TRes call({
-    Query$GetToken$token? token,
-    String? $__typename,
-  });
+  TRes call({Query$GetToken$token? token, String? $__typename});
   CopyWith$Query$GetToken$token<TRes> get token;
 }
 
 class _CopyWithImpl$Query$GetToken<TRes>
     implements CopyWith$Query$GetToken<TRes> {
-  _CopyWithImpl$Query$GetToken(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetToken(this._instance, this._then);
 
   final Query$GetToken _instance;
 
@@ -1107,18 +1058,17 @@ class _CopyWithImpl$Query$GetToken<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? token = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetToken(
-        token: token == _undefined || token == null
-            ? _instance.token
-            : (token as Query$GetToken$token),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? token = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$GetToken(
+          token: token == _undefined || token == null
+              ? _instance.token
+              : (token as Query$GetToken$token),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   CopyWith$Query$GetToken$token<TRes> get token {
     final local$token = _instance.token;
@@ -1132,226 +1082,234 @@ class _CopyWithStubImpl$Query$GetToken<TRes>
 
   TRes _res;
 
-  call({
-    Query$GetToken$token? token,
-    String? $__typename,
-  }) =>
-      _res;
+  call({Query$GetToken$token? token, String? $__typename}) => _res;
 
   CopyWith$Query$GetToken$token<TRes> get token =>
       CopyWith$Query$GetToken$token.stub(_res);
 }
 
-const documentNodeQueryGetToken = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'GetToken'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'address')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: true,
+const documentNodeQueryGetToken = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'GetToken'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'address')),
+          type: NamedTypeNode(name: NameNode(value: 'String'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      )
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'token'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'address'),
-            value: VariableNode(name: NameNode(value: 'address')),
-          )
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'address'),
+            name: NameNode(value: 'token'),
             alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'creatorAddress'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'name'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'symbol'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'description'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'logoUrl'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'websiteUrl'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'totalSupply'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'bondingCurveSupply'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'ethReserve'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'reserve'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'price'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'finalPrice'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'dexPoolAddress'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'migratedAt'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'createdAt'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'tradesCount'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'commentsCount'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'socialMedia'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: SelectionSetNode(selections: [
-              FieldNode(
-                name: NameNode(value: 'xUrl'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'address'),
+                value: VariableNode(name: NameNode(value: 'address')),
               ),
-              FieldNode(
-                name: NameNode(value: 'telegramUrl'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-              FieldNode(
-                name: NameNode(value: 'discordUrl'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-              FieldNode(
-                name: NameNode(value: 'redditUrl'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-              FieldNode(
-                name: NameNode(value: 'facebookUrl'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-              FieldNode(
-                name: NameNode(value: 'instagramUrl'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-              FieldNode(
-                name: NameNode(value: '__typename'),
-                alias: null,
-                arguments: [],
-                directives: [],
-                selectionSet: null,
-              ),
-            ]),
+            ],
+            directives: [],
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'address'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'creatorAddress'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'name'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'symbol'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'description'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'logoUrl'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'websiteUrl'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'totalSupply'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'bondingCurveSupply'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'ethReserve'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'reserve'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'price'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'finalPrice'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'dexPoolAddress'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'migratedAt'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'createdAt'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'tradesCount'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'commentsCount'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'socialMedia'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: SelectionSetNode(
+                    selections: [
+                      FieldNode(
+                        name: NameNode(value: 'xUrl'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: 'telegramUrl'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: 'discordUrl'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: 'redditUrl'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: 'facebookUrl'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: 'instagramUrl'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                      FieldNode(
+                        name: NameNode(value: '__typename'),
+                        alias: null,
+                        arguments: [],
+                        directives: [],
+                        selectionSet: null,
+                      ),
+                    ],
+                  ),
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -1360,24 +1318,15 @@ const documentNodeQueryGetToken = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
+    ),
+  ],
+);
 Query$GetToken _parserFn$Query$GetToken(Map<String, dynamic> data) =>
     Query$GetToken.fromJson(data);
-typedef OnQueryComplete$Query$GetToken = FutureOr<void> Function(
-  Map<String, dynamic>?,
-  Query$GetToken?,
-);
+typedef OnQueryComplete$Query$GetToken =
+    FutureOr<void> Function(Map<String, dynamic>?, Query$GetToken?);
 
 class Options$Query$GetToken extends graphql.QueryOptions<Query$GetToken> {
   Options$Query$GetToken({
@@ -1392,36 +1341,36 @@ class Options$Query$GetToken extends graphql.QueryOptions<Query$GetToken> {
     graphql.Context? context,
     OnQueryComplete$Query$GetToken? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null ? null : _parserFn$Query$GetToken(data),
-                  ),
-          onError: onError,
-          document: documentNodeQueryGetToken,
-          parserFn: _parserFn$Query$GetToken,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$GetToken(data),
+               ),
+         onError: onError,
+         document: documentNodeQueryGetToken,
+         parserFn: _parserFn$Query$GetToken,
+       );
 
   final OnQueryComplete$Query$GetToken? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$GetToken
@@ -1440,20 +1389,20 @@ class WatchOptions$Query$GetToken
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQueryGetToken,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$GetToken,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQueryGetToken,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$GetToken,
+       );
 }
 
 class FetchMoreOptions$Query$GetToken extends graphql.FetchMoreOptions {
@@ -1461,32 +1410,34 @@ class FetchMoreOptions$Query$GetToken extends graphql.FetchMoreOptions {
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$GetToken variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQueryGetToken,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQueryGetToken,
+       );
 }
 
 extension ClientExtension$Query$GetToken on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$GetToken>> query$GetToken(
-          Options$Query$GetToken options) async =>
-      await this.query(options);
+    Options$Query$GetToken options,
+  ) async => await this.query(options);
+
   graphql.ObservableQuery<Query$GetToken> watchQuery$GetToken(
-          WatchOptions$Query$GetToken options) =>
-      this.watchQuery(options);
+    WatchOptions$Query$GetToken options,
+  ) => this.watchQuery(options);
+
   void writeQuery$GetToken({
     required Query$GetToken data,
     required Variables$Query$GetToken variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation: graphql.Operation(document: documentNodeQueryGetToken),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(document: documentNodeQueryGetToken),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
+
   Query$GetToken? readQuery$GetToken({
     required Variables$Query$GetToken variables,
     bool optimistic = true,
@@ -1503,22 +1454,18 @@ extension ClientExtension$Query$GetToken on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$GetToken> useQuery$GetToken(
-        Options$Query$GetToken options) =>
-    graphql_flutter.useQuery(options);
+  Options$Query$GetToken options,
+) => graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$GetToken> useWatchQuery$GetToken(
-        WatchOptions$Query$GetToken options) =>
-    graphql_flutter.useWatchQuery(options);
+  WatchOptions$Query$GetToken options,
+) => graphql_flutter.useWatchQuery(options);
 
 class Query$GetToken$Widget extends graphql_flutter.Query<Query$GetToken> {
   Query$GetToken$Widget({
     widgets.Key? key,
     required Options$Query$GetToken options,
     required graphql_flutter.QueryBuilder<Query$GetToken> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Query$GetToken$token {
@@ -1588,7 +1535,8 @@ class Query$GetToken$token {
       socialMedia: l$socialMedia == null
           ? null
           : Query$GetToken$token$socialMedia.fromJson(
-              (l$socialMedia as Map<String, dynamic>)),
+              (l$socialMedia as Map<String, dynamic>),
+            ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -1664,8 +1612,9 @@ class Query$GetToken$token {
     final l$dexPoolAddress = dexPoolAddress;
     _resultData['dexPoolAddress'] = l$dexPoolAddress;
     final l$migratedAt = migratedAt;
-    _resultData['migratedAt'] =
-        l$migratedAt == null ? null : dateTimeToJson(l$migratedAt);
+    _resultData['migratedAt'] = l$migratedAt == null
+        ? null
+        : dateTimeToJson(l$migratedAt);
     final l$createdAt = createdAt;
     _resultData['createdAt'] = dateTimeToJson(l$createdAt);
     final l$tradesCount = tradesCount;
@@ -1839,10 +1788,7 @@ class Query$GetToken$token {
 
 extension UtilityExtension$Query$GetToken$token on Query$GetToken$token {
   CopyWith$Query$GetToken$token<Query$GetToken$token> get copyWith =>
-      CopyWith$Query$GetToken$token(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$GetToken$token(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetToken$token<TRes> {
@@ -1881,10 +1827,7 @@ abstract class CopyWith$Query$GetToken$token<TRes> {
 
 class _CopyWithImpl$Query$GetToken$token<TRes>
     implements CopyWith$Query$GetToken$token<TRes> {
-  _CopyWithImpl$Query$GetToken$token(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetToken$token(this._instance, this._then);
 
   final Query$GetToken$token _instance;
 
@@ -1913,77 +1856,80 @@ class _CopyWithImpl$Query$GetToken$token<TRes>
     Object? commentsCount = _undefined,
     Object? socialMedia = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetToken$token(
-        address: address == _undefined || address == null
-            ? _instance.address
-            : (address as String),
-        creatorAddress: creatorAddress == _undefined || creatorAddress == null
-            ? _instance.creatorAddress
-            : (creatorAddress as String),
-        name: name == _undefined || name == null
-            ? _instance.name
-            : (name as String),
-        symbol: symbol == _undefined || symbol == null
-            ? _instance.symbol
-            : (symbol as String),
-        description: description == _undefined || description == null
-            ? _instance.description
-            : (description as String),
-        logoUrl: logoUrl == _undefined || logoUrl == null
-            ? _instance.logoUrl
-            : (logoUrl as String),
-        websiteUrl: websiteUrl == _undefined
-            ? _instance.websiteUrl
-            : (websiteUrl as String?),
-        totalSupply: totalSupply == _undefined || totalSupply == null
-            ? _instance.totalSupply
-            : (totalSupply as Decimal),
-        bondingCurveSupply:
-            bondingCurveSupply == _undefined || bondingCurveSupply == null
-                ? _instance.bondingCurveSupply
-                : (bondingCurveSupply as Decimal),
-        ethReserve: ethReserve == _undefined || ethReserve == null
-            ? _instance.ethReserve
-            : (ethReserve as Decimal),
-        reserve: reserve == _undefined || reserve == null
-            ? _instance.reserve
-            : (reserve as Decimal),
-        price: price == _undefined || price == null
-            ? _instance.price
-            : (price as Decimal),
-        finalPrice: finalPrice == _undefined || finalPrice == null
-            ? _instance.finalPrice
-            : (finalPrice as Decimal),
-        dexPoolAddress: dexPoolAddress == _undefined
-            ? _instance.dexPoolAddress
-            : (dexPoolAddress as String?),
-        migratedAt: migratedAt == _undefined
-            ? _instance.migratedAt
-            : (migratedAt as DateTime?),
-        createdAt: createdAt == _undefined || createdAt == null
-            ? _instance.createdAt
-            : (createdAt as DateTime),
-        tradesCount: tradesCount == _undefined || tradesCount == null
-            ? _instance.tradesCount
-            : (tradesCount as int),
-        commentsCount: commentsCount == _undefined || commentsCount == null
-            ? _instance.commentsCount
-            : (commentsCount as int),
-        socialMedia: socialMedia == _undefined
-            ? _instance.socialMedia
-            : (socialMedia as Query$GetToken$token$socialMedia?),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$GetToken$token(
+      address: address == _undefined || address == null
+          ? _instance.address
+          : (address as String),
+      creatorAddress: creatorAddress == _undefined || creatorAddress == null
+          ? _instance.creatorAddress
+          : (creatorAddress as String),
+      name: name == _undefined || name == null
+          ? _instance.name
+          : (name as String),
+      symbol: symbol == _undefined || symbol == null
+          ? _instance.symbol
+          : (symbol as String),
+      description: description == _undefined || description == null
+          ? _instance.description
+          : (description as String),
+      logoUrl: logoUrl == _undefined || logoUrl == null
+          ? _instance.logoUrl
+          : (logoUrl as String),
+      websiteUrl: websiteUrl == _undefined
+          ? _instance.websiteUrl
+          : (websiteUrl as String?),
+      totalSupply: totalSupply == _undefined || totalSupply == null
+          ? _instance.totalSupply
+          : (totalSupply as Decimal),
+      bondingCurveSupply:
+          bondingCurveSupply == _undefined || bondingCurveSupply == null
+          ? _instance.bondingCurveSupply
+          : (bondingCurveSupply as Decimal),
+      ethReserve: ethReserve == _undefined || ethReserve == null
+          ? _instance.ethReserve
+          : (ethReserve as Decimal),
+      reserve: reserve == _undefined || reserve == null
+          ? _instance.reserve
+          : (reserve as Decimal),
+      price: price == _undefined || price == null
+          ? _instance.price
+          : (price as Decimal),
+      finalPrice: finalPrice == _undefined || finalPrice == null
+          ? _instance.finalPrice
+          : (finalPrice as Decimal),
+      dexPoolAddress: dexPoolAddress == _undefined
+          ? _instance.dexPoolAddress
+          : (dexPoolAddress as String?),
+      migratedAt: migratedAt == _undefined
+          ? _instance.migratedAt
+          : (migratedAt as DateTime?),
+      createdAt: createdAt == _undefined || createdAt == null
+          ? _instance.createdAt
+          : (createdAt as DateTime),
+      tradesCount: tradesCount == _undefined || tradesCount == null
+          ? _instance.tradesCount
+          : (tradesCount as int),
+      commentsCount: commentsCount == _undefined || commentsCount == null
+          ? _instance.commentsCount
+          : (commentsCount as int),
+      socialMedia: socialMedia == _undefined
+          ? _instance.socialMedia
+          : (socialMedia as Query$GetToken$token$socialMedia?),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Query$GetToken$token$socialMedia<TRes> get socialMedia {
     final local$socialMedia = _instance.socialMedia;
     return local$socialMedia == null
         ? CopyWith$Query$GetToken$token$socialMedia.stub(_then(_instance))
         : CopyWith$Query$GetToken$token$socialMedia(
-            local$socialMedia, (e) => call(socialMedia: e));
+            local$socialMedia,
+            (e) => call(socialMedia: e),
+          );
   }
 }
 
@@ -2014,8 +1960,7 @@ class _CopyWithStubImpl$Query$GetToken$token<TRes>
     int? commentsCount,
     Query$GetToken$token$socialMedia? socialMedia,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   CopyWith$Query$GetToken$token$socialMedia<TRes> get socialMedia =>
       CopyWith$Query$GetToken$token$socialMedia.stub(_res);
@@ -2155,10 +2100,7 @@ class Query$GetToken$token$socialMedia {
 extension UtilityExtension$Query$GetToken$token$socialMedia
     on Query$GetToken$token$socialMedia {
   CopyWith$Query$GetToken$token$socialMedia<Query$GetToken$token$socialMedia>
-      get copyWith => CopyWith$Query$GetToken$token$socialMedia(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Query$GetToken$token$socialMedia(this, (i) => i);
 }
 
 abstract class CopyWith$Query$GetToken$token$socialMedia<TRes> {
@@ -2183,10 +2125,7 @@ abstract class CopyWith$Query$GetToken$token$socialMedia<TRes> {
 
 class _CopyWithImpl$Query$GetToken$token$socialMedia<TRes>
     implements CopyWith$Query$GetToken$token$socialMedia<TRes> {
-  _CopyWithImpl$Query$GetToken$token$socialMedia(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$GetToken$token$socialMedia(this._instance, this._then);
 
   final Query$GetToken$token$socialMedia _instance;
 
@@ -2202,28 +2141,29 @@ class _CopyWithImpl$Query$GetToken$token$socialMedia<TRes>
     Object? facebookUrl = _undefined,
     Object? instagramUrl = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$GetToken$token$socialMedia(
-        xUrl: xUrl == _undefined ? _instance.xUrl : (xUrl as String?),
-        telegramUrl: telegramUrl == _undefined
-            ? _instance.telegramUrl
-            : (telegramUrl as String?),
-        discordUrl: discordUrl == _undefined
-            ? _instance.discordUrl
-            : (discordUrl as String?),
-        redditUrl: redditUrl == _undefined
-            ? _instance.redditUrl
-            : (redditUrl as String?),
-        facebookUrl: facebookUrl == _undefined
-            ? _instance.facebookUrl
-            : (facebookUrl as String?),
-        instagramUrl: instagramUrl == _undefined
-            ? _instance.instagramUrl
-            : (instagramUrl as String?),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$GetToken$token$socialMedia(
+      xUrl: xUrl == _undefined ? _instance.xUrl : (xUrl as String?),
+      telegramUrl: telegramUrl == _undefined
+          ? _instance.telegramUrl
+          : (telegramUrl as String?),
+      discordUrl: discordUrl == _undefined
+          ? _instance.discordUrl
+          : (discordUrl as String?),
+      redditUrl: redditUrl == _undefined
+          ? _instance.redditUrl
+          : (redditUrl as String?),
+      facebookUrl: facebookUrl == _undefined
+          ? _instance.facebookUrl
+          : (facebookUrl as String?),
+      instagramUrl: instagramUrl == _undefined
+          ? _instance.instagramUrl
+          : (instagramUrl as String?),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Query$GetToken$token$socialMedia<TRes>
@@ -2240,8 +2180,7 @@ class _CopyWithStubImpl$Query$GetToken$token$socialMedia<TRes>
     String? facebookUrl,
     String? instagramUrl,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 }
 
 class Variables$Query$ListTokens {
@@ -2249,20 +2188,20 @@ class Variables$Query$ListTokens {
     required Enum$TokenSortType sortType,
     int? pageSize,
     String? lastTokenAddress,
-  }) =>
-      Variables$Query$ListTokens._({
-        r'sortType': sortType,
-        if (pageSize != null) r'pageSize': pageSize,
-        if (lastTokenAddress != null) r'lastTokenAddress': lastTokenAddress,
-      });
+  }) => Variables$Query$ListTokens._({
+    r'sortType': sortType,
+    if (pageSize != null) r'pageSize': pageSize,
+    if (lastTokenAddress != null) r'lastTokenAddress': lastTokenAddress,
+  });
 
   Variables$Query$ListTokens._(this._$data);
 
   factory Variables$Query$ListTokens.fromJson(Map<String, dynamic> data) {
     final result$data = <String, dynamic>{};
     final l$sortType = data['sortType'];
-    result$data['sortType'] =
-        fromJson$Enum$TokenSortType((l$sortType as String));
+    result$data['sortType'] = fromJson$Enum$TokenSortType(
+      (l$sortType as String),
+    );
     if (data.containsKey('pageSize')) {
       final l$pageSize = data['pageSize'];
       result$data['pageSize'] = (l$pageSize as int?);
@@ -2298,10 +2237,7 @@ class Variables$Query$ListTokens {
   }
 
   CopyWith$Variables$Query$ListTokens<Variables$Query$ListTokens>
-      get copyWith => CopyWith$Variables$Query$ListTokens(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Variables$Query$ListTokens(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -2369,10 +2305,7 @@ abstract class CopyWith$Variables$Query$ListTokens<TRes> {
 
 class _CopyWithImpl$Variables$Query$ListTokens<TRes>
     implements CopyWith$Variables$Query$ListTokens<TRes> {
-  _CopyWithImpl$Variables$Query$ListTokens(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$ListTokens(this._instance, this._then);
 
   final Variables$Query$ListTokens _instance;
 
@@ -2384,15 +2317,16 @@ class _CopyWithImpl$Variables$Query$ListTokens<TRes>
     Object? sortType = _undefined,
     Object? pageSize = _undefined,
     Object? lastTokenAddress = _undefined,
-  }) =>
-      _then(Variables$Query$ListTokens._({
-        ..._instance._$data,
-        if (sortType != _undefined && sortType != null)
-          'sortType': (sortType as Enum$TokenSortType),
-        if (pageSize != _undefined) 'pageSize': (pageSize as int?),
-        if (lastTokenAddress != _undefined)
-          'lastTokenAddress': (lastTokenAddress as String?),
-      }));
+  }) => _then(
+    Variables$Query$ListTokens._({
+      ..._instance._$data,
+      if (sortType != _undefined && sortType != null)
+        'sortType': (sortType as Enum$TokenSortType),
+      if (pageSize != _undefined) 'pageSize': (pageSize as int?),
+      if (lastTokenAddress != _undefined)
+        'lastTokenAddress': (lastTokenAddress as String?),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$ListTokens<TRes>
@@ -2405,23 +2339,21 @@ class _CopyWithStubImpl$Variables$Query$ListTokens<TRes>
     Enum$TokenSortType? sortType,
     int? pageSize,
     String? lastTokenAddress,
-  }) =>
-      _res;
+  }) => _res;
 }
 
 class Query$ListTokens {
-  Query$ListTokens({
-    required this.tokens,
-    this.$__typename = 'Query',
-  });
+  Query$ListTokens({required this.tokens, this.$__typename = 'Query'});
 
   factory Query$ListTokens.fromJson(Map<String, dynamic> json) {
     final l$tokens = json['tokens'];
     final l$$__typename = json['__typename'];
     return Query$ListTokens(
       tokens: (l$tokens as List<dynamic>)
-          .map((e) =>
-              Query$ListTokens$tokens.fromJson((e as Map<String, dynamic>)))
+          .map(
+            (e) =>
+                Query$ListTokens$tokens.fromJson((e as Map<String, dynamic>)),
+          )
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -2481,10 +2413,7 @@ class Query$ListTokens {
 
 extension UtilityExtension$Query$ListTokens on Query$ListTokens {
   CopyWith$Query$ListTokens<Query$ListTokens> get copyWith =>
-      CopyWith$Query$ListTokens(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$ListTokens(this, (i) => i);
 }
 
 abstract class CopyWith$Query$ListTokens<TRes> {
@@ -2496,23 +2425,18 @@ abstract class CopyWith$Query$ListTokens<TRes> {
   factory CopyWith$Query$ListTokens.stub(TRes res) =
       _CopyWithStubImpl$Query$ListTokens;
 
-  TRes call({
-    List<Query$ListTokens$tokens>? tokens,
-    String? $__typename,
-  });
+  TRes call({List<Query$ListTokens$tokens>? tokens, String? $__typename});
   TRes tokens(
-      Iterable<Query$ListTokens$tokens> Function(
-              Iterable<
-                  CopyWith$Query$ListTokens$tokens<Query$ListTokens$tokens>>)
-          _fn);
+    Iterable<Query$ListTokens$tokens> Function(
+      Iterable<CopyWith$Query$ListTokens$tokens<Query$ListTokens$tokens>>,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Query$ListTokens<TRes>
     implements CopyWith$Query$ListTokens<TRes> {
-  _CopyWithImpl$Query$ListTokens(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$ListTokens(this._instance, this._then);
 
   final Query$ListTokens _instance;
 
@@ -2520,31 +2444,30 @@ class _CopyWithImpl$Query$ListTokens<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? tokens = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$ListTokens(
-        tokens: tokens == _undefined || tokens == null
-            ? _instance.tokens
-            : (tokens as List<Query$ListTokens$tokens>),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? tokens = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$ListTokens(
+          tokens: tokens == _undefined || tokens == null
+              ? _instance.tokens
+              : (tokens as List<Query$ListTokens$tokens>),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   TRes tokens(
-          Iterable<Query$ListTokens$tokens> Function(
-                  Iterable<
-                      CopyWith$Query$ListTokens$tokens<
-                          Query$ListTokens$tokens>>)
-              _fn) =>
-      call(
-          tokens:
-              _fn(_instance.tokens.map((e) => CopyWith$Query$ListTokens$tokens(
-                    e,
-                    (i) => i,
-                  ))).toList());
+    Iterable<Query$ListTokens$tokens> Function(
+      Iterable<CopyWith$Query$ListTokens$tokens<Query$ListTokens$tokens>>,
+    )
+    _fn,
+  ) => call(
+    tokens: _fn(
+      _instance.tokens.map(
+        (e) => CopyWith$Query$ListTokens$tokens(e, (i) => i),
+      ),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Query$ListTokens<TRes>
@@ -2553,152 +2476,158 @@ class _CopyWithStubImpl$Query$ListTokens<TRes>
 
   TRes _res;
 
-  call({
-    List<Query$ListTokens$tokens>? tokens,
-    String? $__typename,
-  }) =>
-      _res;
+  call({List<Query$ListTokens$tokens>? tokens, String? $__typename}) => _res;
 
   tokens(_fn) => _res;
 }
 
-const documentNodeQueryListTokens = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'ListTokens'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'sortType')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'TokenSortType'),
-          isNonNull: true,
+const documentNodeQueryListTokens = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'ListTokens'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'sortType')),
+          type: NamedTypeNode(
+            name: NameNode(value: 'TokenSortType'),
+            isNonNull: true,
+          ),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'pageSize')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Int'),
-          isNonNull: false,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'pageSize')),
+          type: NamedTypeNode(name: NameNode(value: 'Int'), isNonNull: false),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'lastTokenAddress')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: false,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'lastTokenAddress')),
+          type: NamedTypeNode(
+            name: NameNode(value: 'String'),
+            isNonNull: false,
+          ),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'tokens'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'sortType'),
-            value: VariableNode(name: NameNode(value: 'sortType')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'pageSize'),
-            value: VariableNode(name: NameNode(value: 'pageSize')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'lastTokenAddress'),
-            value: VariableNode(name: NameNode(value: 'lastTokenAddress')),
-          ),
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'address'),
+            name: NameNode(value: 'tokens'),
             alias: null,
-            arguments: [],
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'sortType'),
+                value: VariableNode(name: NameNode(value: 'sortType')),
+              ),
+              ArgumentNode(
+                name: NameNode(value: 'pageSize'),
+                value: VariableNode(name: NameNode(value: 'pageSize')),
+              ),
+              ArgumentNode(
+                name: NameNode(value: 'lastTokenAddress'),
+                value: VariableNode(name: NameNode(value: 'lastTokenAddress')),
+              ),
+            ],
             directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'creatorAddress'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'name'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'symbol'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'logoUrl'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'totalSupply'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'bondingCurveSupply'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'reserve'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'price'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'createdAt'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'tradesCount'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'commentsCount'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'address'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'creatorAddress'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'name'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'symbol'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'logoUrl'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'totalSupply'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'bondingCurveSupply'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'reserve'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'price'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'createdAt'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'tradesCount'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'commentsCount'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -2707,24 +2636,15 @@ const documentNodeQueryListTokens = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
+    ),
+  ],
+);
 Query$ListTokens _parserFn$Query$ListTokens(Map<String, dynamic> data) =>
     Query$ListTokens.fromJson(data);
-typedef OnQueryComplete$Query$ListTokens = FutureOr<void> Function(
-  Map<String, dynamic>?,
-  Query$ListTokens?,
-);
+typedef OnQueryComplete$Query$ListTokens =
+    FutureOr<void> Function(Map<String, dynamic>?, Query$ListTokens?);
 
 class Options$Query$ListTokens extends graphql.QueryOptions<Query$ListTokens> {
   Options$Query$ListTokens({
@@ -2739,36 +2659,36 @@ class Options$Query$ListTokens extends graphql.QueryOptions<Query$ListTokens> {
     graphql.Context? context,
     OnQueryComplete$Query$ListTokens? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null ? null : _parserFn$Query$ListTokens(data),
-                  ),
-          onError: onError,
-          document: documentNodeQueryListTokens,
-          parserFn: _parserFn$Query$ListTokens,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$ListTokens(data),
+               ),
+         onError: onError,
+         document: documentNodeQueryListTokens,
+         parserFn: _parserFn$Query$ListTokens,
+       );
 
   final OnQueryComplete$Query$ListTokens? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$ListTokens
@@ -2787,20 +2707,20 @@ class WatchOptions$Query$ListTokens
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQueryListTokens,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$ListTokens,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQueryListTokens,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$ListTokens,
+       );
 }
 
 class FetchMoreOptions$Query$ListTokens extends graphql.FetchMoreOptions {
@@ -2808,32 +2728,34 @@ class FetchMoreOptions$Query$ListTokens extends graphql.FetchMoreOptions {
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$ListTokens variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQueryListTokens,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQueryListTokens,
+       );
 }
 
 extension ClientExtension$Query$ListTokens on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$ListTokens>> query$ListTokens(
-          Options$Query$ListTokens options) async =>
-      await this.query(options);
+    Options$Query$ListTokens options,
+  ) async => await this.query(options);
+
   graphql.ObservableQuery<Query$ListTokens> watchQuery$ListTokens(
-          WatchOptions$Query$ListTokens options) =>
-      this.watchQuery(options);
+    WatchOptions$Query$ListTokens options,
+  ) => this.watchQuery(options);
+
   void writeQuery$ListTokens({
     required Query$ListTokens data,
     required Variables$Query$ListTokens variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation: graphql.Operation(document: documentNodeQueryListTokens),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(document: documentNodeQueryListTokens),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
+
   Query$ListTokens? readQuery$ListTokens({
     required Variables$Query$ListTokens variables,
     bool optimistic = true,
@@ -2850,22 +2772,18 @@ extension ClientExtension$Query$ListTokens on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$ListTokens> useQuery$ListTokens(
-        Options$Query$ListTokens options) =>
-    graphql_flutter.useQuery(options);
+  Options$Query$ListTokens options,
+) => graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$ListTokens> useWatchQuery$ListTokens(
-        WatchOptions$Query$ListTokens options) =>
-    graphql_flutter.useWatchQuery(options);
+  WatchOptions$Query$ListTokens options,
+) => graphql_flutter.useWatchQuery(options);
 
 class Query$ListTokens$Widget extends graphql_flutter.Query<Query$ListTokens> {
   Query$ListTokens$Widget({
     widgets.Key? key,
     required Options$Query$ListTokens options,
     required graphql_flutter.QueryBuilder<Query$ListTokens> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Query$ListTokens$tokens {
@@ -3084,10 +3002,7 @@ class Query$ListTokens$tokens {
 
 extension UtilityExtension$Query$ListTokens$tokens on Query$ListTokens$tokens {
   CopyWith$Query$ListTokens$tokens<Query$ListTokens$tokens> get copyWith =>
-      CopyWith$Query$ListTokens$tokens(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$ListTokens$tokens(this, (i) => i);
 }
 
 abstract class CopyWith$Query$ListTokens$tokens<TRes> {
@@ -3118,10 +3033,7 @@ abstract class CopyWith$Query$ListTokens$tokens<TRes> {
 
 class _CopyWithImpl$Query$ListTokens$tokens<TRes>
     implements CopyWith$Query$ListTokens$tokens<TRes> {
-  _CopyWithImpl$Query$ListTokens$tokens(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$ListTokens$tokens(this._instance, this._then);
 
   final Query$ListTokens$tokens _instance;
 
@@ -3143,49 +3055,50 @@ class _CopyWithImpl$Query$ListTokens$tokens<TRes>
     Object? tradesCount = _undefined,
     Object? commentsCount = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$ListTokens$tokens(
-        address: address == _undefined || address == null
-            ? _instance.address
-            : (address as String),
-        creatorAddress: creatorAddress == _undefined || creatorAddress == null
-            ? _instance.creatorAddress
-            : (creatorAddress as String),
-        name: name == _undefined || name == null
-            ? _instance.name
-            : (name as String),
-        symbol: symbol == _undefined || symbol == null
-            ? _instance.symbol
-            : (symbol as String),
-        logoUrl: logoUrl == _undefined || logoUrl == null
-            ? _instance.logoUrl
-            : (logoUrl as String),
-        totalSupply: totalSupply == _undefined || totalSupply == null
-            ? _instance.totalSupply
-            : (totalSupply as Decimal),
-        bondingCurveSupply:
-            bondingCurveSupply == _undefined || bondingCurveSupply == null
-                ? _instance.bondingCurveSupply
-                : (bondingCurveSupply as Decimal),
-        reserve: reserve == _undefined || reserve == null
-            ? _instance.reserve
-            : (reserve as Decimal),
-        price: price == _undefined || price == null
-            ? _instance.price
-            : (price as Decimal),
-        createdAt: createdAt == _undefined || createdAt == null
-            ? _instance.createdAt
-            : (createdAt as DateTime),
-        tradesCount: tradesCount == _undefined || tradesCount == null
-            ? _instance.tradesCount
-            : (tradesCount as int),
-        commentsCount: commentsCount == _undefined || commentsCount == null
-            ? _instance.commentsCount
-            : (commentsCount as int),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$ListTokens$tokens(
+      address: address == _undefined || address == null
+          ? _instance.address
+          : (address as String),
+      creatorAddress: creatorAddress == _undefined || creatorAddress == null
+          ? _instance.creatorAddress
+          : (creatorAddress as String),
+      name: name == _undefined || name == null
+          ? _instance.name
+          : (name as String),
+      symbol: symbol == _undefined || symbol == null
+          ? _instance.symbol
+          : (symbol as String),
+      logoUrl: logoUrl == _undefined || logoUrl == null
+          ? _instance.logoUrl
+          : (logoUrl as String),
+      totalSupply: totalSupply == _undefined || totalSupply == null
+          ? _instance.totalSupply
+          : (totalSupply as Decimal),
+      bondingCurveSupply:
+          bondingCurveSupply == _undefined || bondingCurveSupply == null
+          ? _instance.bondingCurveSupply
+          : (bondingCurveSupply as Decimal),
+      reserve: reserve == _undefined || reserve == null
+          ? _instance.reserve
+          : (reserve as Decimal),
+      price: price == _undefined || price == null
+          ? _instance.price
+          : (price as Decimal),
+      createdAt: createdAt == _undefined || createdAt == null
+          ? _instance.createdAt
+          : (createdAt as DateTime),
+      tradesCount: tradesCount == _undefined || tradesCount == null
+          ? _instance.tradesCount
+          : (tradesCount as int),
+      commentsCount: commentsCount == _undefined || commentsCount == null
+          ? _instance.commentsCount
+          : (commentsCount as int),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Query$ListTokens$tokens<TRes>
@@ -3208,15 +3121,12 @@ class _CopyWithStubImpl$Query$ListTokens$tokens<TRes>
     int? tradesCount,
     int? commentsCount,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 }
 
 class Variables$Query$ListTopHolders {
   factory Variables$Query$ListTopHolders({required String tokenAddress}) =>
-      Variables$Query$ListTopHolders._({
-        r'tokenAddress': tokenAddress,
-      });
+      Variables$Query$ListTopHolders._({r'tokenAddress': tokenAddress});
 
   Variables$Query$ListTopHolders._(this._$data);
 
@@ -3239,10 +3149,7 @@ class Variables$Query$ListTopHolders {
   }
 
   CopyWith$Variables$Query$ListTopHolders<Variables$Query$ListTopHolders>
-      get copyWith => CopyWith$Variables$Query$ListTopHolders(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Variables$Query$ListTopHolders(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -3282,10 +3189,7 @@ abstract class CopyWith$Variables$Query$ListTopHolders<TRes> {
 
 class _CopyWithImpl$Variables$Query$ListTopHolders<TRes>
     implements CopyWith$Variables$Query$ListTopHolders<TRes> {
-  _CopyWithImpl$Variables$Query$ListTopHolders(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$ListTopHolders(this._instance, this._then);
 
   final Variables$Query$ListTopHolders _instance;
 
@@ -3293,12 +3197,13 @@ class _CopyWithImpl$Variables$Query$ListTopHolders<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? tokenAddress = _undefined}) =>
-      _then(Variables$Query$ListTopHolders._({
-        ..._instance._$data,
-        if (tokenAddress != _undefined && tokenAddress != null)
-          'tokenAddress': (tokenAddress as String),
-      }));
+  TRes call({Object? tokenAddress = _undefined}) => _then(
+    Variables$Query$ListTopHolders._({
+      ..._instance._$data,
+      if (tokenAddress != _undefined && tokenAddress != null)
+        'tokenAddress': (tokenAddress as String),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$ListTopHolders<TRes>
@@ -3311,18 +3216,18 @@ class _CopyWithStubImpl$Variables$Query$ListTopHolders<TRes>
 }
 
 class Query$ListTopHolders {
-  Query$ListTopHolders({
-    required this.topHolders,
-    this.$__typename = 'Query',
-  });
+  Query$ListTopHolders({required this.topHolders, this.$__typename = 'Query'});
 
   factory Query$ListTopHolders.fromJson(Map<String, dynamic> json) {
     final l$topHolders = json['topHolders'];
     final l$$__typename = json['__typename'];
     return Query$ListTopHolders(
       topHolders: (l$topHolders as List<dynamic>)
-          .map((e) => Query$ListTopHolders$topHolders.fromJson(
-              (e as Map<String, dynamic>)))
+          .map(
+            (e) => Query$ListTopHolders$topHolders.fromJson(
+              (e as Map<String, dynamic>),
+            ),
+          )
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -3382,10 +3287,7 @@ class Query$ListTopHolders {
 
 extension UtilityExtension$Query$ListTopHolders on Query$ListTopHolders {
   CopyWith$Query$ListTopHolders<Query$ListTopHolders> get copyWith =>
-      CopyWith$Query$ListTopHolders(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$ListTopHolders(this, (i) => i);
 }
 
 abstract class CopyWith$Query$ListTopHolders<TRes> {
@@ -3402,19 +3304,20 @@ abstract class CopyWith$Query$ListTopHolders<TRes> {
     String? $__typename,
   });
   TRes topHolders(
-      Iterable<Query$ListTopHolders$topHolders> Function(
-              Iterable<
-                  CopyWith$Query$ListTopHolders$topHolders<
-                      Query$ListTopHolders$topHolders>>)
-          _fn);
+    Iterable<Query$ListTopHolders$topHolders> Function(
+      Iterable<
+        CopyWith$Query$ListTopHolders$topHolders<
+          Query$ListTopHolders$topHolders
+        >
+      >,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Query$ListTopHolders<TRes>
     implements CopyWith$Query$ListTopHolders<TRes> {
-  _CopyWithImpl$Query$ListTopHolders(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$ListTopHolders(this._instance, this._then);
 
   final Query$ListTopHolders _instance;
 
@@ -3425,28 +3328,33 @@ class _CopyWithImpl$Query$ListTopHolders<TRes>
   TRes call({
     Object? topHolders = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$ListTopHolders(
-        topHolders: topHolders == _undefined || topHolders == null
-            ? _instance.topHolders
-            : (topHolders as List<Query$ListTopHolders$topHolders>),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$ListTopHolders(
+      topHolders: topHolders == _undefined || topHolders == null
+          ? _instance.topHolders
+          : (topHolders as List<Query$ListTopHolders$topHolders>),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   TRes topHolders(
-          Iterable<Query$ListTopHolders$topHolders> Function(
-                  Iterable<
-                      CopyWith$Query$ListTopHolders$topHolders<
-                          Query$ListTopHolders$topHolders>>)
-              _fn) =>
-      call(
-          topHolders: _fn(_instance.topHolders
-              .map((e) => CopyWith$Query$ListTopHolders$topHolders(
-                    e,
-                    (i) => i,
-                  ))).toList());
+    Iterable<Query$ListTopHolders$topHolders> Function(
+      Iterable<
+        CopyWith$Query$ListTopHolders$topHolders<
+          Query$ListTopHolders$topHolders
+        >
+      >,
+    )
+    _fn,
+  ) => call(
+    topHolders: _fn(
+      _instance.topHolders.map(
+        (e) => CopyWith$Query$ListTopHolders$topHolders(e, (i) => i),
+      ),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Query$ListTopHolders<TRes>
@@ -3458,60 +3366,69 @@ class _CopyWithStubImpl$Query$ListTopHolders<TRes>
   call({
     List<Query$ListTopHolders$topHolders>? topHolders,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 
   topHolders(_fn) => _res;
 }
 
-const documentNodeQueryListTopHolders = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'ListTopHolders'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'tokenAddress')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: true,
+const documentNodeQueryListTopHolders = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'ListTopHolders'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'tokenAddress')),
+          type: NamedTypeNode(name: NameNode(value: 'String'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      )
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'topHolders'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'tokenAddress'),
-            value: VariableNode(name: NameNode(value: 'tokenAddress')),
-          )
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'accountAddress'),
+            name: NameNode(value: 'topHolders'),
             alias: null,
-            arguments: [],
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'tokenAddress'),
+                value: VariableNode(name: NameNode(value: 'tokenAddress')),
+              ),
+            ],
             directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'balance'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'percentage'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'accountAddress'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'balance'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'percentage'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -3520,25 +3437,16 @@ const documentNodeQueryListTopHolders = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
-Query$ListTopHolders _parserFn$Query$ListTopHolders(
-        Map<String, dynamic> data) =>
-    Query$ListTopHolders.fromJson(data);
-typedef OnQueryComplete$Query$ListTopHolders = FutureOr<void> Function(
-  Map<String, dynamic>?,
-  Query$ListTopHolders?,
+    ),
+  ],
 );
+Query$ListTopHolders _parserFn$Query$ListTopHolders(
+  Map<String, dynamic> data,
+) => Query$ListTopHolders.fromJson(data);
+typedef OnQueryComplete$Query$ListTopHolders =
+    FutureOr<void> Function(Map<String, dynamic>?, Query$ListTopHolders?);
 
 class Options$Query$ListTopHolders
     extends graphql.QueryOptions<Query$ListTopHolders> {
@@ -3554,36 +3462,36 @@ class Options$Query$ListTopHolders
     graphql.Context? context,
     OnQueryComplete$Query$ListTopHolders? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null ? null : _parserFn$Query$ListTopHolders(data),
-                  ),
-          onError: onError,
-          document: documentNodeQueryListTopHolders,
-          parserFn: _parserFn$Query$ListTopHolders,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$ListTopHolders(data),
+               ),
+         onError: onError,
+         document: documentNodeQueryListTopHolders,
+         parserFn: _parserFn$Query$ListTopHolders,
+       );
 
   final OnQueryComplete$Query$ListTopHolders? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$ListTopHolders
@@ -3602,20 +3510,20 @@ class WatchOptions$Query$ListTopHolders
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQueryListTopHolders,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$ListTopHolders,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQueryListTopHolders,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$ListTopHolders,
+       );
 }
 
 class FetchMoreOptions$Query$ListTopHolders extends graphql.FetchMoreOptions {
@@ -3623,33 +3531,34 @@ class FetchMoreOptions$Query$ListTopHolders extends graphql.FetchMoreOptions {
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$ListTopHolders variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQueryListTopHolders,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQueryListTopHolders,
+       );
 }
 
 extension ClientExtension$Query$ListTopHolders on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$ListTopHolders>> query$ListTopHolders(
-          Options$Query$ListTopHolders options) async =>
-      await this.query(options);
+    Options$Query$ListTopHolders options,
+  ) async => await this.query(options);
+
   graphql.ObservableQuery<Query$ListTopHolders> watchQuery$ListTopHolders(
-          WatchOptions$Query$ListTopHolders options) =>
-      this.watchQuery(options);
+    WatchOptions$Query$ListTopHolders options,
+  ) => this.watchQuery(options);
+
   void writeQuery$ListTopHolders({
     required Query$ListTopHolders data,
     required Variables$Query$ListTopHolders variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation:
-              graphql.Operation(document: documentNodeQueryListTopHolders),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(document: documentNodeQueryListTopHolders),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
+
   Query$ListTopHolders? readQuery$ListTopHolders({
     required Variables$Query$ListTopHolders variables,
     bool optimistic = true,
@@ -3666,11 +3575,11 @@ extension ClientExtension$Query$ListTopHolders on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$ListTopHolders> useQuery$ListTopHolders(
-        Options$Query$ListTopHolders options) =>
-    graphql_flutter.useQuery(options);
+  Options$Query$ListTopHolders options,
+) => graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$ListTopHolders> useWatchQuery$ListTopHolders(
-        WatchOptions$Query$ListTopHolders options) =>
-    graphql_flutter.useWatchQuery(options);
+  WatchOptions$Query$ListTopHolders options,
+) => graphql_flutter.useWatchQuery(options);
 
 class Query$ListTopHolders$Widget
     extends graphql_flutter.Query<Query$ListTopHolders> {
@@ -3678,11 +3587,7 @@ class Query$ListTopHolders$Widget
     widgets.Key? key,
     required Options$Query$ListTopHolders options,
     required graphql_flutter.QueryBuilder<Query$ListTopHolders> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Query$ListTopHolders$topHolders {
@@ -3777,10 +3682,7 @@ class Query$ListTopHolders$topHolders {
 extension UtilityExtension$Query$ListTopHolders$topHolders
     on Query$ListTopHolders$topHolders {
   CopyWith$Query$ListTopHolders$topHolders<Query$ListTopHolders$topHolders>
-      get copyWith => CopyWith$Query$ListTopHolders$topHolders(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Query$ListTopHolders$topHolders(this, (i) => i);
 }
 
 abstract class CopyWith$Query$ListTopHolders$topHolders<TRes> {
@@ -3802,10 +3704,7 @@ abstract class CopyWith$Query$ListTopHolders$topHolders<TRes> {
 
 class _CopyWithImpl$Query$ListTopHolders$topHolders<TRes>
     implements CopyWith$Query$ListTopHolders$topHolders<TRes> {
-  _CopyWithImpl$Query$ListTopHolders$topHolders(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$ListTopHolders$topHolders(this._instance, this._then);
 
   final Query$ListTopHolders$topHolders _instance;
 
@@ -3818,21 +3717,22 @@ class _CopyWithImpl$Query$ListTopHolders$topHolders<TRes>
     Object? balance = _undefined,
     Object? percentage = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$ListTopHolders$topHolders(
-        accountAddress: accountAddress == _undefined || accountAddress == null
-            ? _instance.accountAddress
-            : (accountAddress as String),
-        balance: balance == _undefined || balance == null
-            ? _instance.balance
-            : (balance as Decimal),
-        percentage: percentage == _undefined || percentage == null
-            ? _instance.percentage
-            : (percentage as double),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$ListTopHolders$topHolders(
+      accountAddress: accountAddress == _undefined || accountAddress == null
+          ? _instance.accountAddress
+          : (accountAddress as String),
+      balance: balance == _undefined || balance == null
+          ? _instance.balance
+          : (balance as Decimal),
+      percentage: percentage == _undefined || percentage == null
+          ? _instance.percentage
+          : (percentage as double),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Query$ListTopHolders$topHolders<TRes>
@@ -3846,6 +3746,5 @@ class _CopyWithStubImpl$Query$ListTopHolders$topHolders<TRes>
     Decimal? balance,
     double? percentage,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 }

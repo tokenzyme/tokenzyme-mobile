@@ -11,12 +11,11 @@ class Variables$Query$ListTrades {
     required String tokenAddress,
     required int pageSize,
     String? lastTradeId,
-  }) =>
-      Variables$Query$ListTrades._({
-        r'tokenAddress': tokenAddress,
-        r'pageSize': pageSize,
-        if (lastTradeId != null) r'lastTradeId': lastTradeId,
-      });
+  }) => Variables$Query$ListTrades._({
+    r'tokenAddress': tokenAddress,
+    r'pageSize': pageSize,
+    if (lastTradeId != null) r'lastTradeId': lastTradeId,
+  });
 
   Variables$Query$ListTrades._(this._$data);
 
@@ -55,10 +54,7 @@ class Variables$Query$ListTrades {
   }
 
   CopyWith$Variables$Query$ListTrades<Variables$Query$ListTrades>
-      get copyWith => CopyWith$Variables$Query$ListTrades(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Variables$Query$ListTrades(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -113,19 +109,12 @@ abstract class CopyWith$Variables$Query$ListTrades<TRes> {
   factory CopyWith$Variables$Query$ListTrades.stub(TRes res) =
       _CopyWithStubImpl$Variables$Query$ListTrades;
 
-  TRes call({
-    String? tokenAddress,
-    int? pageSize,
-    String? lastTradeId,
-  });
+  TRes call({String? tokenAddress, int? pageSize, String? lastTradeId});
 }
 
 class _CopyWithImpl$Variables$Query$ListTrades<TRes>
     implements CopyWith$Variables$Query$ListTrades<TRes> {
-  _CopyWithImpl$Variables$Query$ListTrades(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$ListTrades(this._instance, this._then);
 
   final Variables$Query$ListTrades _instance;
 
@@ -137,15 +126,16 @@ class _CopyWithImpl$Variables$Query$ListTrades<TRes>
     Object? tokenAddress = _undefined,
     Object? pageSize = _undefined,
     Object? lastTradeId = _undefined,
-  }) =>
-      _then(Variables$Query$ListTrades._({
-        ..._instance._$data,
-        if (tokenAddress != _undefined && tokenAddress != null)
-          'tokenAddress': (tokenAddress as String),
-        if (pageSize != _undefined && pageSize != null)
-          'pageSize': (pageSize as int),
-        if (lastTradeId != _undefined) 'lastTradeId': (lastTradeId as String?),
-      }));
+  }) => _then(
+    Variables$Query$ListTrades._({
+      ..._instance._$data,
+      if (tokenAddress != _undefined && tokenAddress != null)
+        'tokenAddress': (tokenAddress as String),
+      if (pageSize != _undefined && pageSize != null)
+        'pageSize': (pageSize as int),
+      if (lastTradeId != _undefined) 'lastTradeId': (lastTradeId as String?),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$ListTrades<TRes>
@@ -154,27 +144,21 @@ class _CopyWithStubImpl$Variables$Query$ListTrades<TRes>
 
   TRes _res;
 
-  call({
-    String? tokenAddress,
-    int? pageSize,
-    String? lastTradeId,
-  }) =>
-      _res;
+  call({String? tokenAddress, int? pageSize, String? lastTradeId}) => _res;
 }
 
 class Query$ListTrades {
-  Query$ListTrades({
-    required this.trades,
-    this.$__typename = 'Query',
-  });
+  Query$ListTrades({required this.trades, this.$__typename = 'Query'});
 
   factory Query$ListTrades.fromJson(Map<String, dynamic> json) {
     final l$trades = json['trades'];
     final l$$__typename = json['__typename'];
     return Query$ListTrades(
       trades: (l$trades as List<dynamic>)
-          .map((e) =>
-              Query$ListTrades$trades.fromJson((e as Map<String, dynamic>)))
+          .map(
+            (e) =>
+                Query$ListTrades$trades.fromJson((e as Map<String, dynamic>)),
+          )
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -234,10 +218,7 @@ class Query$ListTrades {
 
 extension UtilityExtension$Query$ListTrades on Query$ListTrades {
   CopyWith$Query$ListTrades<Query$ListTrades> get copyWith =>
-      CopyWith$Query$ListTrades(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$ListTrades(this, (i) => i);
 }
 
 abstract class CopyWith$Query$ListTrades<TRes> {
@@ -249,23 +230,18 @@ abstract class CopyWith$Query$ListTrades<TRes> {
   factory CopyWith$Query$ListTrades.stub(TRes res) =
       _CopyWithStubImpl$Query$ListTrades;
 
-  TRes call({
-    List<Query$ListTrades$trades>? trades,
-    String? $__typename,
-  });
+  TRes call({List<Query$ListTrades$trades>? trades, String? $__typename});
   TRes trades(
-      Iterable<Query$ListTrades$trades> Function(
-              Iterable<
-                  CopyWith$Query$ListTrades$trades<Query$ListTrades$trades>>)
-          _fn);
+    Iterable<Query$ListTrades$trades> Function(
+      Iterable<CopyWith$Query$ListTrades$trades<Query$ListTrades$trades>>,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Query$ListTrades<TRes>
     implements CopyWith$Query$ListTrades<TRes> {
-  _CopyWithImpl$Query$ListTrades(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$ListTrades(this._instance, this._then);
 
   final Query$ListTrades _instance;
 
@@ -273,31 +249,30 @@ class _CopyWithImpl$Query$ListTrades<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? trades = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Query$ListTrades(
-        trades: trades == _undefined || trades == null
-            ? _instance.trades
-            : (trades as List<Query$ListTrades$trades>),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? trades = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Query$ListTrades(
+          trades: trades == _undefined || trades == null
+              ? _instance.trades
+              : (trades as List<Query$ListTrades$trades>),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 
   TRes trades(
-          Iterable<Query$ListTrades$trades> Function(
-                  Iterable<
-                      CopyWith$Query$ListTrades$trades<
-                          Query$ListTrades$trades>>)
-              _fn) =>
-      call(
-          trades:
-              _fn(_instance.trades.map((e) => CopyWith$Query$ListTrades$trades(
-                    e,
-                    (i) => i,
-                  ))).toList());
+    Iterable<Query$ListTrades$trades> Function(
+      Iterable<CopyWith$Query$ListTrades$trades<Query$ListTrades$trades>>,
+    )
+    _fn,
+  ) => call(
+    trades: _fn(
+      _instance.trades.map(
+        (e) => CopyWith$Query$ListTrades$trades(e, (i) => i),
+      ),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Query$ListTrades<TRes>
@@ -306,110 +281,113 @@ class _CopyWithStubImpl$Query$ListTrades<TRes>
 
   TRes _res;
 
-  call({
-    List<Query$ListTrades$trades>? trades,
-    String? $__typename,
-  }) =>
-      _res;
+  call({List<Query$ListTrades$trades>? trades, String? $__typename}) => _res;
 
   trades(_fn) => _res;
 }
 
-const documentNodeQueryListTrades = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'ListTrades'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'tokenAddress')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: true,
+const documentNodeQueryListTrades = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'ListTrades'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'tokenAddress')),
+          type: NamedTypeNode(name: NameNode(value: 'String'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'pageSize')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Int'),
-          isNonNull: true,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'pageSize')),
+          type: NamedTypeNode(name: NameNode(value: 'Int'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'lastTradeId')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: false,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'lastTradeId')),
+          type: NamedTypeNode(
+            name: NameNode(value: 'String'),
+            isNonNull: false,
+          ),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'trades'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'tokenAddress'),
-            value: VariableNode(name: NameNode(value: 'tokenAddress')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'pageSize'),
-            value: VariableNode(name: NameNode(value: 'pageSize')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'lastTradeId'),
-            value: VariableNode(name: NameNode(value: 'lastTradeId')),
-          ),
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'id'),
+            name: NameNode(value: 'trades'),
             alias: null,
-            arguments: [],
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'tokenAddress'),
+                value: VariableNode(name: NameNode(value: 'tokenAddress')),
+              ),
+              ArgumentNode(
+                name: NameNode(value: 'pageSize'),
+                value: VariableNode(name: NameNode(value: 'pageSize')),
+              ),
+              ArgumentNode(
+                name: NameNode(value: 'lastTradeId'),
+                value: VariableNode(name: NameNode(value: 'lastTradeId')),
+              ),
+            ],
             directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'accountAddress'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'type'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'tokenAmount'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'ethAmount'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'createdAt'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'id'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'accountAddress'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'type'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'tokenAmount'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'ethAmount'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'createdAt'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -418,24 +396,15 @@ const documentNodeQueryListTrades = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
+    ),
+  ],
+);
 Query$ListTrades _parserFn$Query$ListTrades(Map<String, dynamic> data) =>
     Query$ListTrades.fromJson(data);
-typedef OnQueryComplete$Query$ListTrades = FutureOr<void> Function(
-  Map<String, dynamic>?,
-  Query$ListTrades?,
-);
+typedef OnQueryComplete$Query$ListTrades =
+    FutureOr<void> Function(Map<String, dynamic>?, Query$ListTrades?);
 
 class Options$Query$ListTrades extends graphql.QueryOptions<Query$ListTrades> {
   Options$Query$ListTrades({
@@ -450,36 +419,36 @@ class Options$Query$ListTrades extends graphql.QueryOptions<Query$ListTrades> {
     graphql.Context? context,
     OnQueryComplete$Query$ListTrades? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null ? null : _parserFn$Query$ListTrades(data),
-                  ),
-          onError: onError,
-          document: documentNodeQueryListTrades,
-          parserFn: _parserFn$Query$ListTrades,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$ListTrades(data),
+               ),
+         onError: onError,
+         document: documentNodeQueryListTrades,
+         parserFn: _parserFn$Query$ListTrades,
+       );
 
   final OnQueryComplete$Query$ListTrades? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$ListTrades
@@ -498,20 +467,20 @@ class WatchOptions$Query$ListTrades
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQueryListTrades,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$ListTrades,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQueryListTrades,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$ListTrades,
+       );
 }
 
 class FetchMoreOptions$Query$ListTrades extends graphql.FetchMoreOptions {
@@ -519,32 +488,34 @@ class FetchMoreOptions$Query$ListTrades extends graphql.FetchMoreOptions {
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$ListTrades variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQueryListTrades,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQueryListTrades,
+       );
 }
 
 extension ClientExtension$Query$ListTrades on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$ListTrades>> query$ListTrades(
-          Options$Query$ListTrades options) async =>
-      await this.query(options);
+    Options$Query$ListTrades options,
+  ) async => await this.query(options);
+
   graphql.ObservableQuery<Query$ListTrades> watchQuery$ListTrades(
-          WatchOptions$Query$ListTrades options) =>
-      this.watchQuery(options);
+    WatchOptions$Query$ListTrades options,
+  ) => this.watchQuery(options);
+
   void writeQuery$ListTrades({
     required Query$ListTrades data,
     required Variables$Query$ListTrades variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation: graphql.Operation(document: documentNodeQueryListTrades),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(document: documentNodeQueryListTrades),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
+
   Query$ListTrades? readQuery$ListTrades({
     required Variables$Query$ListTrades variables,
     bool optimistic = true,
@@ -561,22 +532,18 @@ extension ClientExtension$Query$ListTrades on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$ListTrades> useQuery$ListTrades(
-        Options$Query$ListTrades options) =>
-    graphql_flutter.useQuery(options);
+  Options$Query$ListTrades options,
+) => graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$ListTrades> useWatchQuery$ListTrades(
-        WatchOptions$Query$ListTrades options) =>
-    graphql_flutter.useWatchQuery(options);
+  WatchOptions$Query$ListTrades options,
+) => graphql_flutter.useWatchQuery(options);
 
 class Query$ListTrades$Widget extends graphql_flutter.Query<Query$ListTrades> {
   Query$ListTrades$Widget({
     widgets.Key? key,
     required Options$Query$ListTrades options,
     required graphql_flutter.QueryBuilder<Query$ListTrades> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Query$ListTrades$trades {
@@ -711,10 +678,7 @@ class Query$ListTrades$trades {
 
 extension UtilityExtension$Query$ListTrades$trades on Query$ListTrades$trades {
   CopyWith$Query$ListTrades$trades<Query$ListTrades$trades> get copyWith =>
-      CopyWith$Query$ListTrades$trades(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$ListTrades$trades(this, (i) => i);
 }
 
 abstract class CopyWith$Query$ListTrades$trades<TRes> {
@@ -739,10 +703,7 @@ abstract class CopyWith$Query$ListTrades$trades<TRes> {
 
 class _CopyWithImpl$Query$ListTrades$trades<TRes>
     implements CopyWith$Query$ListTrades$trades<TRes> {
-  _CopyWithImpl$Query$ListTrades$trades(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$ListTrades$trades(this._instance, this._then);
 
   final Query$ListTrades$trades _instance;
 
@@ -758,28 +719,29 @@ class _CopyWithImpl$Query$ListTrades$trades<TRes>
     Object? ethAmount = _undefined,
     Object? createdAt = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$ListTrades$trades(
-        id: id == _undefined || id == null ? _instance.id : (id as String),
-        accountAddress: accountAddress == _undefined || accountAddress == null
-            ? _instance.accountAddress
-            : (accountAddress as String),
-        type: type == _undefined || type == null
-            ? _instance.type
-            : (type as Enum$TradeType),
-        tokenAmount: tokenAmount == _undefined || tokenAmount == null
-            ? _instance.tokenAmount
-            : (tokenAmount as Decimal),
-        ethAmount: ethAmount == _undefined || ethAmount == null
-            ? _instance.ethAmount
-            : (ethAmount as Decimal),
-        createdAt: createdAt == _undefined || createdAt == null
-            ? _instance.createdAt
-            : (createdAt as DateTime),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$ListTrades$trades(
+      id: id == _undefined || id == null ? _instance.id : (id as String),
+      accountAddress: accountAddress == _undefined || accountAddress == null
+          ? _instance.accountAddress
+          : (accountAddress as String),
+      type: type == _undefined || type == null
+          ? _instance.type
+          : (type as Enum$TradeType),
+      tokenAmount: tokenAmount == _undefined || tokenAmount == null
+          ? _instance.tokenAmount
+          : (tokenAmount as Decimal),
+      ethAmount: ethAmount == _undefined || ethAmount == null
+          ? _instance.ethAmount
+          : (ethAmount as Decimal),
+      createdAt: createdAt == _undefined || createdAt == null
+          ? _instance.createdAt
+          : (createdAt as DateTime),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Query$ListTrades$trades<TRes>
@@ -796,6 +758,5 @@ class _CopyWithStubImpl$Query$ListTrades$trades<TRes>
     Decimal? ethAmount,
     DateTime? createdAt,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 }

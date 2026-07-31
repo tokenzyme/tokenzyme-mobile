@@ -36,7 +36,7 @@ class AccountBadge extends StatelessWidget {
         builder: (_, FollowLink? followLink) => formatAccountAddress(address)
             .text(color: getTextColor())
             .paddingSymmetric(horizontal: AppPadding.sm)
-            .inkWell(customBorder: CircleBorder(), onPressed: followLink),
+            .tappable(customBorder: CircleBorder(), onPressed: followLink),
       ),
     );
   }

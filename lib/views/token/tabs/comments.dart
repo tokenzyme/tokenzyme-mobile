@@ -176,7 +176,7 @@ class Comments extends HookConsumerWidget {
           'No comments here yet'.text(style: context.headlineSmall).toCenter().sliverFillRemaining()
         else
           SliverList.separated(
-            separatorBuilder: (_, __) => AppPadding.md.heightBox,
+            separatorBuilder: (_, _) => AppPadding.md.heightBox,
             itemCount: comments.length,
             itemBuilder: (_, int index) {
               Query$ListComments$comments comment = comments[index];

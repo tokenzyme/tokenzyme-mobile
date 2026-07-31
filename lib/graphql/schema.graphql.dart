@@ -2,11 +2,10 @@ class Input$SignInInput {
   factory Input$SignInInput({
     required String signatureMessageId,
     required String signature,
-  }) =>
-      Input$SignInInput._({
-        r'signatureMessageId': signatureMessageId,
-        r'signature': signature,
-      });
+  }) => Input$SignInInput._({
+    r'signatureMessageId': signatureMessageId,
+    r'signature': signature,
+  });
 
   Input$SignInInput._(this._$data);
 
@@ -35,10 +34,7 @@ class Input$SignInInput {
   }
 
   CopyWith$Input$SignInInput<Input$SignInInput> get copyWith =>
-      CopyWith$Input$SignInInput(
-        this,
-        (i) => i,
-      );
+      CopyWith$Input$SignInInput(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -65,10 +61,7 @@ class Input$SignInInput {
   int get hashCode {
     final l$signatureMessageId = signatureMessageId;
     final l$signature = signature;
-    return Object.hashAll([
-      l$signatureMessageId,
-      l$signature,
-    ]);
+    return Object.hashAll([l$signatureMessageId, l$signature]);
   }
 }
 
@@ -81,18 +74,12 @@ abstract class CopyWith$Input$SignInInput<TRes> {
   factory CopyWith$Input$SignInInput.stub(TRes res) =
       _CopyWithStubImpl$Input$SignInInput;
 
-  TRes call({
-    String? signatureMessageId,
-    String? signature,
-  });
+  TRes call({String? signatureMessageId, String? signature});
 }
 
 class _CopyWithImpl$Input$SignInInput<TRes>
     implements CopyWith$Input$SignInInput<TRes> {
-  _CopyWithImpl$Input$SignInInput(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Input$SignInInput(this._instance, this._then);
 
   final Input$SignInInput _instance;
 
@@ -103,14 +90,15 @@ class _CopyWithImpl$Input$SignInInput<TRes>
   TRes call({
     Object? signatureMessageId = _undefined,
     Object? signature = _undefined,
-  }) =>
-      _then(Input$SignInInput._({
-        ..._instance._$data,
-        if (signatureMessageId != _undefined && signatureMessageId != null)
-          'signatureMessageId': (signatureMessageId as String),
-        if (signature != _undefined && signature != null)
-          'signature': (signature as String),
-      }));
+  }) => _then(
+    Input$SignInInput._({
+      ..._instance._$data,
+      if (signatureMessageId != _undefined && signatureMessageId != null)
+        'signatureMessageId': (signatureMessageId as String),
+      if (signature != _undefined && signature != null)
+        'signature': (signature as String),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Input$SignInInput<TRes>
@@ -119,33 +107,30 @@ class _CopyWithStubImpl$Input$SignInInput<TRes>
 
   TRes _res;
 
-  call({
-    String? signatureMessageId,
-    String? signature,
-  }) =>
-      _res;
+  call({String? signatureMessageId, String? signature}) => _res;
 }
 
 class Input$CreateSignatureMessageInput {
   factory Input$CreateSignatureMessageInput({
     required String accountAddress,
     required Enum$SignatureMessageType type,
-  }) =>
-      Input$CreateSignatureMessageInput._({
-        r'accountAddress': accountAddress,
-        r'type': type,
-      });
+  }) => Input$CreateSignatureMessageInput._({
+    r'accountAddress': accountAddress,
+    r'type': type,
+  });
 
   Input$CreateSignatureMessageInput._(this._$data);
 
   factory Input$CreateSignatureMessageInput.fromJson(
-      Map<String, dynamic> data) {
+    Map<String, dynamic> data,
+  ) {
     final result$data = <String, dynamic>{};
     final l$accountAddress = data['accountAddress'];
     result$data['accountAddress'] = (l$accountAddress as String);
     final l$type = data['type'];
-    result$data['type'] =
-        fromJson$Enum$SignatureMessageType((l$type as String));
+    result$data['type'] = fromJson$Enum$SignatureMessageType(
+      (l$type as String),
+    );
     return Input$CreateSignatureMessageInput._(result$data);
   }
 
@@ -166,10 +151,7 @@ class Input$CreateSignatureMessageInput {
   }
 
   CopyWith$Input$CreateSignatureMessageInput<Input$CreateSignatureMessageInput>
-      get copyWith => CopyWith$Input$CreateSignatureMessageInput(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Input$CreateSignatureMessageInput(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -197,10 +179,7 @@ class Input$CreateSignatureMessageInput {
   int get hashCode {
     final l$accountAddress = accountAddress;
     final l$type = type;
-    return Object.hashAll([
-      l$accountAddress,
-      l$type,
-    ]);
+    return Object.hashAll([l$accountAddress, l$type]);
   }
 }
 
@@ -213,18 +192,12 @@ abstract class CopyWith$Input$CreateSignatureMessageInput<TRes> {
   factory CopyWith$Input$CreateSignatureMessageInput.stub(TRes res) =
       _CopyWithStubImpl$Input$CreateSignatureMessageInput;
 
-  TRes call({
-    String? accountAddress,
-    Enum$SignatureMessageType? type,
-  });
+  TRes call({String? accountAddress, Enum$SignatureMessageType? type});
 }
 
 class _CopyWithImpl$Input$CreateSignatureMessageInput<TRes>
     implements CopyWith$Input$CreateSignatureMessageInput<TRes> {
-  _CopyWithImpl$Input$CreateSignatureMessageInput(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Input$CreateSignatureMessageInput(this._instance, this._then);
 
   final Input$CreateSignatureMessageInput _instance;
 
@@ -232,17 +205,16 @@ class _CopyWithImpl$Input$CreateSignatureMessageInput<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? accountAddress = _undefined,
-    Object? type = _undefined,
-  }) =>
-      _then(Input$CreateSignatureMessageInput._({
-        ..._instance._$data,
-        if (accountAddress != _undefined && accountAddress != null)
-          'accountAddress': (accountAddress as String),
-        if (type != _undefined && type != null)
-          'type': (type as Enum$SignatureMessageType),
-      }));
+  TRes call({Object? accountAddress = _undefined, Object? type = _undefined}) =>
+      _then(
+        Input$CreateSignatureMessageInput._({
+          ..._instance._$data,
+          if (accountAddress != _undefined && accountAddress != null)
+            'accountAddress': (accountAddress as String),
+          if (type != _undefined && type != null)
+            'type': (type as Enum$SignatureMessageType),
+        }),
+      );
 }
 
 class _CopyWithStubImpl$Input$CreateSignatureMessageInput<TRes>
@@ -251,22 +223,14 @@ class _CopyWithStubImpl$Input$CreateSignatureMessageInput<TRes>
 
   TRes _res;
 
-  call({
-    String? accountAddress,
-    Enum$SignatureMessageType? type,
-  }) =>
-      _res;
+  call({String? accountAddress, Enum$SignatureMessageType? type}) => _res;
 }
 
 class Input$AddCommentInput {
   factory Input$AddCommentInput({
     required String tokenAddress,
     required String text,
-  }) =>
-      Input$AddCommentInput._({
-        r'tokenAddress': tokenAddress,
-        r'text': text,
-      });
+  }) => Input$AddCommentInput._({r'tokenAddress': tokenAddress, r'text': text});
 
   Input$AddCommentInput._(this._$data);
 
@@ -295,10 +259,7 @@ class Input$AddCommentInput {
   }
 
   CopyWith$Input$AddCommentInput<Input$AddCommentInput> get copyWith =>
-      CopyWith$Input$AddCommentInput(
-        this,
-        (i) => i,
-      );
+      CopyWith$Input$AddCommentInput(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -325,10 +286,7 @@ class Input$AddCommentInput {
   int get hashCode {
     final l$tokenAddress = tokenAddress;
     final l$text = text;
-    return Object.hashAll([
-      l$tokenAddress,
-      l$text,
-    ]);
+    return Object.hashAll([l$tokenAddress, l$text]);
   }
 }
 
@@ -341,18 +299,12 @@ abstract class CopyWith$Input$AddCommentInput<TRes> {
   factory CopyWith$Input$AddCommentInput.stub(TRes res) =
       _CopyWithStubImpl$Input$AddCommentInput;
 
-  TRes call({
-    String? tokenAddress,
-    String? text,
-  });
+  TRes call({String? tokenAddress, String? text});
 }
 
 class _CopyWithImpl$Input$AddCommentInput<TRes>
     implements CopyWith$Input$AddCommentInput<TRes> {
-  _CopyWithImpl$Input$AddCommentInput(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Input$AddCommentInput(this._instance, this._then);
 
   final Input$AddCommentInput _instance;
 
@@ -360,16 +312,15 @@ class _CopyWithImpl$Input$AddCommentInput<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? tokenAddress = _undefined,
-    Object? text = _undefined,
-  }) =>
-      _then(Input$AddCommentInput._({
-        ..._instance._$data,
-        if (tokenAddress != _undefined && tokenAddress != null)
-          'tokenAddress': (tokenAddress as String),
-        if (text != _undefined && text != null) 'text': (text as String),
-      }));
+  TRes call({Object? tokenAddress = _undefined, Object? text = _undefined}) =>
+      _then(
+        Input$AddCommentInput._({
+          ..._instance._$data,
+          if (tokenAddress != _undefined && tokenAddress != null)
+            'tokenAddress': (tokenAddress as String),
+          if (text != _undefined && text != null) 'text': (text as String),
+        }),
+      );
 }
 
 class _CopyWithStubImpl$Input$AddCommentInput<TRes>
@@ -378,11 +329,7 @@ class _CopyWithStubImpl$Input$AddCommentInput<TRes>
 
   TRes _res;
 
-  call({
-    String? tokenAddress,
-    String? text,
-  }) =>
-      _res;
+  call({String? tokenAddress, String? text}) => _res;
 }
 
 enum Enum$TradeType {

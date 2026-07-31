@@ -180,7 +180,7 @@ class Launchpad extends HookConsumerWidget {
           ).sliverFillRemaining()
         else ...<Widget>[
           SliverList.separated(
-            separatorBuilder: (_, __) => AppPadding.md.heightBox,
+            separatorBuilder: (_, _) => AppPadding.md.heightBox,
             itemCount: tokens.length,
             itemBuilder: (_, int index) => TokenSummaryCard(token: tokens[index], ethPrice: ethPrice),
           ),
