@@ -72,32 +72,36 @@ class MainDrawer extends HookConsumerWidget {
             ),
             Divider(),
             'Community'.text(style: context.titleMedium, color: context.colors.outline).paddingAll(AppPadding.content),
-            ListTile(
-              leading: Icon(HugeIcons.strokeRoundedNewTwitter),
-              title: 'X'.text(),
-              onTap: handleXPressed,
-            ),
-            ListTile(
-              leading: Icon(HugeIcons.strokeRoundedTelegram),
-              title: 'Telegram'.text(),
-              onTap: handleTelegramPressed,
-            ),
-            ListTile(
-              leading: Icon(HugeIcons.strokeRoundedReddit),
-              title: 'Reddit'.text(),
-              onTap: handleRedditPressed,
-            ),
+            if (xUrl.isNotEmpty)
+              ListTile(
+                leading: Icon(HugeIcons.strokeRoundedNewTwitter),
+                title: 'X'.text(),
+                onTap: handleXPressed,
+              ),
+            if (telegramUrl.isNotEmpty)
+              ListTile(
+                leading: Icon(HugeIcons.strokeRoundedTelegram),
+                title: 'Telegram'.text(),
+                onTap: handleTelegramPressed,
+              ),
+            if (redditUrl.isNotEmpty)
+              ListTile(
+                leading: Icon(HugeIcons.strokeRoundedReddit),
+                title: 'Reddit'.text(),
+                onTap: handleRedditPressed,
+              ),
             ListTile(
               leading: Icon(HugeIcons.strokeRoundedGlobe02),
               title: 'Website'.text(),
               onTap: handleWebsitePressed,
             ),
             Divider(),
-            ListTile(
-              leading: Icon(HugeIcons.strokeRoundedCustomerSupport),
-              title: 'Support channel'.text(),
-              onTap: handleTelegramPressed,
-            ),
+            if (telegramUrl.isNotEmpty)
+              ListTile(
+                leading: Icon(HugeIcons.strokeRoundedCustomerSupport),
+                title: 'Support channel'.text(),
+                onTap: handleTelegramPressed,
+              ),
             ListTile(
               leading: Icon(HugeIcons.strokeRoundedPaintBucket),
               title: 'Change theme'.text(),

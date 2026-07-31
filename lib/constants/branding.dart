@@ -12,11 +12,13 @@ library;
 /// Display name, used in the app bar and in the wallet-connection prompt.
 const String appName = 'Tokenzyme';
 
-/// Community links shown in the navigation drawer. Set any of these to an empty
-/// string to hide the corresponding entry.
-const String xUrl = 'https://x.com/tokenzyme';
-const String telegramUrl = 'https://t.me/tokenzyme';
-const String redditUrl = 'https://reddit.com/r/tokenzyme';
+/// Community links shown in the navigation drawer. Empty by default: this project
+/// publishes none, and shipping someone else's channels is worse than shipping none.
+/// Fill in your own and the entries appear; leave one empty and it stays hidden.
+/// Telegram also drives the "Support channel" entry.
+const String xUrl = '';
+const String telegramUrl = '';
+const String redditUrl = '';
 
 /// Custom URL scheme the wallet redirects back to after signing.
 ///
