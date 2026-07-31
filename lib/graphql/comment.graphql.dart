@@ -11,12 +11,11 @@ class Variables$Query$ListComments {
     required String tokenAddress,
     required int pageSize,
     int? lastCommentId,
-  }) =>
-      Variables$Query$ListComments._({
-        r'tokenAddress': tokenAddress,
-        r'pageSize': pageSize,
-        if (lastCommentId != null) r'lastCommentId': lastCommentId,
-      });
+  }) => Variables$Query$ListComments._({
+    r'tokenAddress': tokenAddress,
+    r'pageSize': pageSize,
+    if (lastCommentId != null) r'lastCommentId': lastCommentId,
+  });
 
   Variables$Query$ListComments._(this._$data);
 
@@ -55,10 +54,7 @@ class Variables$Query$ListComments {
   }
 
   CopyWith$Variables$Query$ListComments<Variables$Query$ListComments>
-      get copyWith => CopyWith$Variables$Query$ListComments(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Variables$Query$ListComments(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -113,19 +109,12 @@ abstract class CopyWith$Variables$Query$ListComments<TRes> {
   factory CopyWith$Variables$Query$ListComments.stub(TRes res) =
       _CopyWithStubImpl$Variables$Query$ListComments;
 
-  TRes call({
-    String? tokenAddress,
-    int? pageSize,
-    int? lastCommentId,
-  });
+  TRes call({String? tokenAddress, int? pageSize, int? lastCommentId});
 }
 
 class _CopyWithImpl$Variables$Query$ListComments<TRes>
     implements CopyWith$Variables$Query$ListComments<TRes> {
-  _CopyWithImpl$Variables$Query$ListComments(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Query$ListComments(this._instance, this._then);
 
   final Variables$Query$ListComments _instance;
 
@@ -137,16 +126,16 @@ class _CopyWithImpl$Variables$Query$ListComments<TRes>
     Object? tokenAddress = _undefined,
     Object? pageSize = _undefined,
     Object? lastCommentId = _undefined,
-  }) =>
-      _then(Variables$Query$ListComments._({
-        ..._instance._$data,
-        if (tokenAddress != _undefined && tokenAddress != null)
-          'tokenAddress': (tokenAddress as String),
-        if (pageSize != _undefined && pageSize != null)
-          'pageSize': (pageSize as int),
-        if (lastCommentId != _undefined)
-          'lastCommentId': (lastCommentId as int?),
-      }));
+  }) => _then(
+    Variables$Query$ListComments._({
+      ..._instance._$data,
+      if (tokenAddress != _undefined && tokenAddress != null)
+        'tokenAddress': (tokenAddress as String),
+      if (pageSize != _undefined && pageSize != null)
+        'pageSize': (pageSize as int),
+      if (lastCommentId != _undefined) 'lastCommentId': (lastCommentId as int?),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Query$ListComments<TRes>
@@ -155,27 +144,22 @@ class _CopyWithStubImpl$Variables$Query$ListComments<TRes>
 
   TRes _res;
 
-  call({
-    String? tokenAddress,
-    int? pageSize,
-    int? lastCommentId,
-  }) =>
-      _res;
+  call({String? tokenAddress, int? pageSize, int? lastCommentId}) => _res;
 }
 
 class Query$ListComments {
-  Query$ListComments({
-    required this.comments,
-    this.$__typename = 'Query',
-  });
+  Query$ListComments({required this.comments, this.$__typename = 'Query'});
 
   factory Query$ListComments.fromJson(Map<String, dynamic> json) {
     final l$comments = json['comments'];
     final l$$__typename = json['__typename'];
     return Query$ListComments(
       comments: (l$comments as List<dynamic>)
-          .map((e) =>
-              Query$ListComments$comments.fromJson((e as Map<String, dynamic>)))
+          .map(
+            (e) => Query$ListComments$comments.fromJson(
+              (e as Map<String, dynamic>),
+            ),
+          )
           .toList(),
       $__typename: (l$$__typename as String),
     );
@@ -235,10 +219,7 @@ class Query$ListComments {
 
 extension UtilityExtension$Query$ListComments on Query$ListComments {
   CopyWith$Query$ListComments<Query$ListComments> get copyWith =>
-      CopyWith$Query$ListComments(
-        this,
-        (i) => i,
-      );
+      CopyWith$Query$ListComments(this, (i) => i);
 }
 
 abstract class CopyWith$Query$ListComments<TRes> {
@@ -250,24 +231,20 @@ abstract class CopyWith$Query$ListComments<TRes> {
   factory CopyWith$Query$ListComments.stub(TRes res) =
       _CopyWithStubImpl$Query$ListComments;
 
-  TRes call({
-    List<Query$ListComments$comments>? comments,
-    String? $__typename,
-  });
+  TRes call({List<Query$ListComments$comments>? comments, String? $__typename});
   TRes comments(
-      Iterable<Query$ListComments$comments> Function(
-              Iterable<
-                  CopyWith$Query$ListComments$comments<
-                      Query$ListComments$comments>>)
-          _fn);
+    Iterable<Query$ListComments$comments> Function(
+      Iterable<
+        CopyWith$Query$ListComments$comments<Query$ListComments$comments>
+      >,
+    )
+    _fn,
+  );
 }
 
 class _CopyWithImpl$Query$ListComments<TRes>
     implements CopyWith$Query$ListComments<TRes> {
-  _CopyWithImpl$Query$ListComments(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$ListComments(this._instance, this._then);
 
   final Query$ListComments _instance;
 
@@ -278,28 +255,31 @@ class _CopyWithImpl$Query$ListComments<TRes>
   TRes call({
     Object? comments = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$ListComments(
-        comments: comments == _undefined || comments == null
-            ? _instance.comments
-            : (comments as List<Query$ListComments$comments>),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$ListComments(
+      comments: comments == _undefined || comments == null
+          ? _instance.comments
+          : (comments as List<Query$ListComments$comments>),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   TRes comments(
-          Iterable<Query$ListComments$comments> Function(
-                  Iterable<
-                      CopyWith$Query$ListComments$comments<
-                          Query$ListComments$comments>>)
-              _fn) =>
-      call(
-          comments: _fn(_instance.comments
-              .map((e) => CopyWith$Query$ListComments$comments(
-                    e,
-                    (i) => i,
-                  ))).toList());
+    Iterable<Query$ListComments$comments> Function(
+      Iterable<
+        CopyWith$Query$ListComments$comments<Query$ListComments$comments>
+      >,
+    )
+    _fn,
+  ) => call(
+    comments: _fn(
+      _instance.comments.map(
+        (e) => CopyWith$Query$ListComments$comments(e, (i) => i),
+      ),
+    ).toList(),
+  );
 }
 
 class _CopyWithStubImpl$Query$ListComments<TRes>
@@ -308,96 +288,97 @@ class _CopyWithStubImpl$Query$ListComments<TRes>
 
   TRes _res;
 
-  call({
-    List<Query$ListComments$comments>? comments,
-    String? $__typename,
-  }) =>
+  call({List<Query$ListComments$comments>? comments, String? $__typename}) =>
       _res;
 
   comments(_fn) => _res;
 }
 
-const documentNodeQueryListComments = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.query,
-    name: NameNode(value: 'ListComments'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'tokenAddress')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'String'),
-          isNonNull: true,
+const documentNodeQueryListComments = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.query,
+      name: NameNode(value: 'ListComments'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'tokenAddress')),
+          type: NamedTypeNode(name: NameNode(value: 'String'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'pageSize')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Int'),
-          isNonNull: true,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'pageSize')),
+          type: NamedTypeNode(name: NameNode(value: 'Int'), isNonNull: true),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'lastCommentId')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'Int'),
-          isNonNull: false,
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'lastCommentId')),
+          type: NamedTypeNode(name: NameNode(value: 'Int'), isNonNull: false),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      ),
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'comments'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'tokenAddress'),
-            value: VariableNode(name: NameNode(value: 'tokenAddress')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'pageSize'),
-            value: VariableNode(name: NameNode(value: 'pageSize')),
-          ),
-          ArgumentNode(
-            name: NameNode(value: 'lastCommentId'),
-            value: VariableNode(name: NameNode(value: 'lastCommentId')),
-          ),
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'id'),
+            name: NameNode(value: 'comments'),
             alias: null,
-            arguments: [],
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'tokenAddress'),
+                value: VariableNode(name: NameNode(value: 'tokenAddress')),
+              ),
+              ArgumentNode(
+                name: NameNode(value: 'pageSize'),
+                value: VariableNode(name: NameNode(value: 'pageSize')),
+              ),
+              ArgumentNode(
+                name: NameNode(value: 'lastCommentId'),
+                value: VariableNode(name: NameNode(value: 'lastCommentId')),
+              ),
+            ],
             directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'accountAddress'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'text'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
-          ),
-          FieldNode(
-            name: NameNode(value: 'createdAt'),
-            alias: null,
-            arguments: [],
-            directives: [],
-            selectionSet: null,
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'id'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'accountAddress'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'text'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: 'createdAt'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -406,24 +387,15 @@ const documentNodeQueryListComments = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
+    ),
+  ],
+);
 Query$ListComments _parserFn$Query$ListComments(Map<String, dynamic> data) =>
     Query$ListComments.fromJson(data);
-typedef OnQueryComplete$Query$ListComments = FutureOr<void> Function(
-  Map<String, dynamic>?,
-  Query$ListComments?,
-);
+typedef OnQueryComplete$Query$ListComments =
+    FutureOr<void> Function(Map<String, dynamic>?, Query$ListComments?);
 
 class Options$Query$ListComments
     extends graphql.QueryOptions<Query$ListComments> {
@@ -439,36 +411,36 @@ class Options$Query$ListComments
     graphql.Context? context,
     OnQueryComplete$Query$ListComments? onComplete,
     graphql.OnQueryError? onError,
-  })  : onCompleteWithParsed = onComplete,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          pollInterval: pollInterval,
-          context: context,
-          onComplete: onComplete == null
-              ? null
-              : (data) => onComplete(
-                    data,
-                    data == null ? null : _parserFn$Query$ListComments(data),
-                  ),
-          onError: onError,
-          document: documentNodeQueryListComments,
-          parserFn: _parserFn$Query$ListComments,
-        );
+  }) : onCompleteWithParsed = onComplete,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         pollInterval: pollInterval,
+         context: context,
+         onComplete: onComplete == null
+             ? null
+             : (data) => onComplete(
+                 data,
+                 data == null ? null : _parserFn$Query$ListComments(data),
+               ),
+         onError: onError,
+         document: documentNodeQueryListComments,
+         parserFn: _parserFn$Query$ListComments,
+       );
 
   final OnQueryComplete$Query$ListComments? onCompleteWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onComplete == null
-            ? super.properties
-            : super.properties.where((property) => property != onComplete),
-        onCompleteWithParsed,
-      ];
+    ...super.onComplete == null
+        ? super.properties
+        : super.properties.where((property) => property != onComplete),
+    onCompleteWithParsed,
+  ];
 }
 
 class WatchOptions$Query$ListComments
@@ -487,20 +459,20 @@ class WatchOptions$Query$ListComments
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeQueryListComments,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Query$ListComments,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeQueryListComments,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Query$ListComments,
+       );
 }
 
 class FetchMoreOptions$Query$ListComments extends graphql.FetchMoreOptions {
@@ -508,32 +480,34 @@ class FetchMoreOptions$Query$ListComments extends graphql.FetchMoreOptions {
     required graphql.UpdateQuery updateQuery,
     required Variables$Query$ListComments variables,
   }) : super(
-          updateQuery: updateQuery,
-          variables: variables.toJson(),
-          document: documentNodeQueryListComments,
-        );
+         updateQuery: updateQuery,
+         variables: variables.toJson(),
+         document: documentNodeQueryListComments,
+       );
 }
 
 extension ClientExtension$Query$ListComments on graphql.GraphQLClient {
   Future<graphql.QueryResult<Query$ListComments>> query$ListComments(
-          Options$Query$ListComments options) async =>
-      await this.query(options);
+    Options$Query$ListComments options,
+  ) async => await this.query(options);
+
   graphql.ObservableQuery<Query$ListComments> watchQuery$ListComments(
-          WatchOptions$Query$ListComments options) =>
-      this.watchQuery(options);
+    WatchOptions$Query$ListComments options,
+  ) => this.watchQuery(options);
+
   void writeQuery$ListComments({
     required Query$ListComments data,
     required Variables$Query$ListComments variables,
     bool broadcast = true,
-  }) =>
-      this.writeQuery(
-        graphql.Request(
-          operation: graphql.Operation(document: documentNodeQueryListComments),
-          variables: variables.toJson(),
-        ),
-        data: data.toJson(),
-        broadcast: broadcast,
-      );
+  }) => this.writeQuery(
+    graphql.Request(
+      operation: graphql.Operation(document: documentNodeQueryListComments),
+      variables: variables.toJson(),
+    ),
+    data: data.toJson(),
+    broadcast: broadcast,
+  );
+
   Query$ListComments? readQuery$ListComments({
     required Variables$Query$ListComments variables,
     bool optimistic = true,
@@ -550,11 +524,11 @@ extension ClientExtension$Query$ListComments on graphql.GraphQLClient {
 }
 
 graphql_flutter.QueryHookResult<Query$ListComments> useQuery$ListComments(
-        Options$Query$ListComments options) =>
-    graphql_flutter.useQuery(options);
+  Options$Query$ListComments options,
+) => graphql_flutter.useQuery(options);
 graphql.ObservableQuery<Query$ListComments> useWatchQuery$ListComments(
-        WatchOptions$Query$ListComments options) =>
-    graphql_flutter.useWatchQuery(options);
+  WatchOptions$Query$ListComments options,
+) => graphql_flutter.useWatchQuery(options);
 
 class Query$ListComments$Widget
     extends graphql_flutter.Query<Query$ListComments> {
@@ -562,11 +536,7 @@ class Query$ListComments$Widget
     widgets.Key? key,
     required Options$Query$ListComments options,
     required graphql_flutter.QueryBuilder<Query$ListComments> builder,
-  }) : super(
-          key: key,
-          options: options,
-          builder: builder,
-        );
+  }) : super(key: key, options: options, builder: builder);
 }
 
 class Query$ListComments$comments {
@@ -675,10 +645,7 @@ class Query$ListComments$comments {
 extension UtilityExtension$Query$ListComments$comments
     on Query$ListComments$comments {
   CopyWith$Query$ListComments$comments<Query$ListComments$comments>
-      get copyWith => CopyWith$Query$ListComments$comments(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Query$ListComments$comments(this, (i) => i);
 }
 
 abstract class CopyWith$Query$ListComments$comments<TRes> {
@@ -701,10 +668,7 @@ abstract class CopyWith$Query$ListComments$comments<TRes> {
 
 class _CopyWithImpl$Query$ListComments$comments<TRes>
     implements CopyWith$Query$ListComments$comments<TRes> {
-  _CopyWithImpl$Query$ListComments$comments(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Query$ListComments$comments(this._instance, this._then);
 
   final Query$ListComments$comments _instance;
 
@@ -718,22 +682,23 @@ class _CopyWithImpl$Query$ListComments$comments<TRes>
     Object? text = _undefined,
     Object? createdAt = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Query$ListComments$comments(
-        id: id == _undefined || id == null ? _instance.id : (id as int),
-        accountAddress: accountAddress == _undefined || accountAddress == null
-            ? _instance.accountAddress
-            : (accountAddress as String),
-        text: text == _undefined || text == null
-            ? _instance.text
-            : (text as String),
-        createdAt: createdAt == _undefined || createdAt == null
-            ? _instance.createdAt
-            : (createdAt as DateTime),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Query$ListComments$comments(
+      id: id == _undefined || id == null ? _instance.id : (id as int),
+      accountAddress: accountAddress == _undefined || accountAddress == null
+          ? _instance.accountAddress
+          : (accountAddress as String),
+      text: text == _undefined || text == null
+          ? _instance.text
+          : (text as String),
+      createdAt: createdAt == _undefined || createdAt == null
+          ? _instance.createdAt
+          : (createdAt as DateTime),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 }
 
 class _CopyWithStubImpl$Query$ListComments$comments<TRes>
@@ -748,24 +713,22 @@ class _CopyWithStubImpl$Query$ListComments$comments<TRes>
     String? text,
     DateTime? createdAt,
     String? $__typename,
-  }) =>
-      _res;
+  }) => _res;
 }
 
 class Variables$Mutation$AddComment {
-  factory Variables$Mutation$AddComment(
-          {required Input$AddCommentInput input}) =>
-      Variables$Mutation$AddComment._({
-        r'input': input,
-      });
+  factory Variables$Mutation$AddComment({
+    required Input$AddCommentInput input,
+  }) => Variables$Mutation$AddComment._({r'input': input});
 
   Variables$Mutation$AddComment._(this._$data);
 
   factory Variables$Mutation$AddComment.fromJson(Map<String, dynamic> data) {
     final result$data = <String, dynamic>{};
     final l$input = data['input'];
-    result$data['input'] =
-        Input$AddCommentInput.fromJson((l$input as Map<String, dynamic>));
+    result$data['input'] = Input$AddCommentInput.fromJson(
+      (l$input as Map<String, dynamic>),
+    );
     return Variables$Mutation$AddComment._(result$data);
   }
 
@@ -781,10 +744,7 @@ class Variables$Mutation$AddComment {
   }
 
   CopyWith$Variables$Mutation$AddComment<Variables$Mutation$AddComment>
-      get copyWith => CopyWith$Variables$Mutation$AddComment(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Variables$Mutation$AddComment(this, (i) => i);
 
   @override
   bool operator ==(Object other) {
@@ -824,10 +784,7 @@ abstract class CopyWith$Variables$Mutation$AddComment<TRes> {
 
 class _CopyWithImpl$Variables$Mutation$AddComment<TRes>
     implements CopyWith$Variables$Mutation$AddComment<TRes> {
-  _CopyWithImpl$Variables$Mutation$AddComment(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Variables$Mutation$AddComment(this._instance, this._then);
 
   final Variables$Mutation$AddComment _instance;
 
@@ -835,12 +792,13 @@ class _CopyWithImpl$Variables$Mutation$AddComment<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({Object? input = _undefined}) =>
-      _then(Variables$Mutation$AddComment._({
-        ..._instance._$data,
-        if (input != _undefined && input != null)
-          'input': (input as Input$AddCommentInput),
-      }));
+  TRes call({Object? input = _undefined}) => _then(
+    Variables$Mutation$AddComment._({
+      ..._instance._$data,
+      if (input != _undefined && input != null)
+        'input': (input as Input$AddCommentInput),
+    }),
+  );
 }
 
 class _CopyWithStubImpl$Variables$Mutation$AddComment<TRes>
@@ -863,7 +821,8 @@ class Mutation$AddComment {
     final l$$__typename = json['__typename'];
     return Mutation$AddComment(
       addComment: Mutation$AddComment$addComment.fromJson(
-          (l$addComment as Map<String, dynamic>)),
+        (l$addComment as Map<String, dynamic>),
+      ),
       $__typename: (l$$__typename as String),
     );
   }
@@ -885,10 +844,7 @@ class Mutation$AddComment {
   int get hashCode {
     final l$addComment = addComment;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$addComment,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$addComment, l$$__typename]);
   }
 
   @override
@@ -915,10 +871,7 @@ class Mutation$AddComment {
 
 extension UtilityExtension$Mutation$AddComment on Mutation$AddComment {
   CopyWith$Mutation$AddComment<Mutation$AddComment> get copyWith =>
-      CopyWith$Mutation$AddComment(
-        this,
-        (i) => i,
-      );
+      CopyWith$Mutation$AddComment(this, (i) => i);
 }
 
 abstract class CopyWith$Mutation$AddComment<TRes> {
@@ -930,19 +883,13 @@ abstract class CopyWith$Mutation$AddComment<TRes> {
   factory CopyWith$Mutation$AddComment.stub(TRes res) =
       _CopyWithStubImpl$Mutation$AddComment;
 
-  TRes call({
-    Mutation$AddComment$addComment? addComment,
-    String? $__typename,
-  });
+  TRes call({Mutation$AddComment$addComment? addComment, String? $__typename});
   CopyWith$Mutation$AddComment$addComment<TRes> get addComment;
 }
 
 class _CopyWithImpl$Mutation$AddComment<TRes>
     implements CopyWith$Mutation$AddComment<TRes> {
-  _CopyWithImpl$Mutation$AddComment(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Mutation$AddComment(this._instance, this._then);
 
   final Mutation$AddComment _instance;
 
@@ -953,20 +900,23 @@ class _CopyWithImpl$Mutation$AddComment<TRes>
   TRes call({
     Object? addComment = _undefined,
     Object? $__typename = _undefined,
-  }) =>
-      _then(Mutation$AddComment(
-        addComment: addComment == _undefined || addComment == null
-            ? _instance.addComment
-            : (addComment as Mutation$AddComment$addComment),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  }) => _then(
+    Mutation$AddComment(
+      addComment: addComment == _undefined || addComment == null
+          ? _instance.addComment
+          : (addComment as Mutation$AddComment$addComment),
+      $__typename: $__typename == _undefined || $__typename == null
+          ? _instance.$__typename
+          : ($__typename as String),
+    ),
+  );
 
   CopyWith$Mutation$AddComment$addComment<TRes> get addComment {
     final local$addComment = _instance.addComment;
     return CopyWith$Mutation$AddComment$addComment(
-        local$addComment, (e) => call(addComment: e));
+      local$addComment,
+      (e) => call(addComment: e),
+    );
   }
 }
 
@@ -976,50 +926,60 @@ class _CopyWithStubImpl$Mutation$AddComment<TRes>
 
   TRes _res;
 
-  call({
-    Mutation$AddComment$addComment? addComment,
-    String? $__typename,
-  }) =>
+  call({Mutation$AddComment$addComment? addComment, String? $__typename}) =>
       _res;
 
   CopyWith$Mutation$AddComment$addComment<TRes> get addComment =>
       CopyWith$Mutation$AddComment$addComment.stub(_res);
 }
 
-const documentNodeMutationAddComment = DocumentNode(definitions: [
-  OperationDefinitionNode(
-    type: OperationType.mutation,
-    name: NameNode(value: 'AddComment'),
-    variableDefinitions: [
-      VariableDefinitionNode(
-        variable: VariableNode(name: NameNode(value: 'input')),
-        type: NamedTypeNode(
-          name: NameNode(value: 'AddCommentInput'),
-          isNonNull: true,
+const documentNodeMutationAddComment = DocumentNode(
+  definitions: [
+    OperationDefinitionNode(
+      type: OperationType.mutation,
+      name: NameNode(value: 'AddComment'),
+      variableDefinitions: [
+        VariableDefinitionNode(
+          variable: VariableNode(name: NameNode(value: 'input')),
+          type: NamedTypeNode(
+            name: NameNode(value: 'AddCommentInput'),
+            isNonNull: true,
+          ),
+          defaultValue: DefaultValueNode(value: null),
+          directives: [],
         ),
-        defaultValue: DefaultValueNode(value: null),
-        directives: [],
-      )
-    ],
-    directives: [],
-    selectionSet: SelectionSetNode(selections: [
-      FieldNode(
-        name: NameNode(value: 'addComment'),
-        alias: null,
-        arguments: [
-          ArgumentNode(
-            name: NameNode(value: 'input'),
-            value: VariableNode(name: NameNode(value: 'input')),
-          )
-        ],
-        directives: [],
-        selectionSet: SelectionSetNode(selections: [
+      ],
+      directives: [],
+      selectionSet: SelectionSetNode(
+        selections: [
           FieldNode(
-            name: NameNode(value: 'id'),
+            name: NameNode(value: 'addComment'),
             alias: null,
-            arguments: [],
+            arguments: [
+              ArgumentNode(
+                name: NameNode(value: 'input'),
+                value: VariableNode(name: NameNode(value: 'input')),
+              ),
+            ],
             directives: [],
-            selectionSet: null,
+            selectionSet: SelectionSetNode(
+              selections: [
+                FieldNode(
+                  name: NameNode(value: 'id'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+                FieldNode(
+                  name: NameNode(value: '__typename'),
+                  alias: null,
+                  arguments: [],
+                  directives: [],
+                  selectionSet: null,
+                ),
+              ],
+            ),
           ),
           FieldNode(
             name: NameNode(value: '__typename'),
@@ -1028,24 +988,15 @@ const documentNodeMutationAddComment = DocumentNode(definitions: [
             directives: [],
             selectionSet: null,
           ),
-        ]),
+        ],
       ),
-      FieldNode(
-        name: NameNode(value: '__typename'),
-        alias: null,
-        arguments: [],
-        directives: [],
-        selectionSet: null,
-      ),
-    ]),
-  ),
-]);
+    ),
+  ],
+);
 Mutation$AddComment _parserFn$Mutation$AddComment(Map<String, dynamic> data) =>
     Mutation$AddComment.fromJson(data);
-typedef OnMutationCompleted$Mutation$AddComment = FutureOr<void> Function(
-  Map<String, dynamic>?,
-  Mutation$AddComment?,
-);
+typedef OnMutationCompleted$Mutation$AddComment =
+    FutureOr<void> Function(Map<String, dynamic>?, Mutation$AddComment?);
 
 class Options$Mutation$AddComment
     extends graphql.MutationOptions<Mutation$AddComment> {
@@ -1061,36 +1012,36 @@ class Options$Mutation$AddComment
     OnMutationCompleted$Mutation$AddComment? onCompleted,
     graphql.OnMutationUpdate<Mutation$AddComment>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null ? null : _parserFn$Mutation$AddComment(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationAddComment,
-          parserFn: _parserFn$Mutation$AddComment,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null ? null : _parserFn$Mutation$AddComment(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationAddComment,
+         parserFn: _parserFn$Mutation$AddComment,
+       );
 
   final OnMutationCompleted$Mutation$AddComment? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
 class WatchOptions$Mutation$AddComment
@@ -1109,59 +1060,59 @@ class WatchOptions$Mutation$AddComment
     bool carryForwardDataOnException = true,
     bool fetchResults = false,
   }) : super(
-          variables: variables.toJson(),
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          document: documentNodeMutationAddComment,
-          pollInterval: pollInterval,
-          eagerlyFetchResults: eagerlyFetchResults,
-          carryForwardDataOnException: carryForwardDataOnException,
-          fetchResults: fetchResults,
-          parserFn: _parserFn$Mutation$AddComment,
-        );
+         variables: variables.toJson(),
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         document: documentNodeMutationAddComment,
+         pollInterval: pollInterval,
+         eagerlyFetchResults: eagerlyFetchResults,
+         carryForwardDataOnException: carryForwardDataOnException,
+         fetchResults: fetchResults,
+         parserFn: _parserFn$Mutation$AddComment,
+       );
 }
 
 extension ClientExtension$Mutation$AddComment on graphql.GraphQLClient {
   Future<graphql.QueryResult<Mutation$AddComment>> mutate$AddComment(
-          Options$Mutation$AddComment options) async =>
-      await this.mutate(options);
+    Options$Mutation$AddComment options,
+  ) async => await this.mutate(options);
+
   graphql.ObservableQuery<Mutation$AddComment> watchMutation$AddComment(
-          WatchOptions$Mutation$AddComment options) =>
-      this.watchMutation(options);
+    WatchOptions$Mutation$AddComment options,
+  ) => this.watchMutation(options);
 }
 
 class Mutation$AddComment$HookResult {
-  Mutation$AddComment$HookResult(
-    this.runMutation,
-    this.result,
-  );
+  Mutation$AddComment$HookResult(this.runMutation, this.result);
 
   final RunMutation$Mutation$AddComment runMutation;
 
   final graphql.QueryResult<Mutation$AddComment> result;
 }
 
-Mutation$AddComment$HookResult useMutation$AddComment(
-    [WidgetOptions$Mutation$AddComment? options]) {
-  final result = graphql_flutter
-      .useMutation(options ?? WidgetOptions$Mutation$AddComment());
+Mutation$AddComment$HookResult useMutation$AddComment([
+  WidgetOptions$Mutation$AddComment? options,
+]) {
+  final result = graphql_flutter.useMutation(
+    options ?? WidgetOptions$Mutation$AddComment(),
+  );
   return Mutation$AddComment$HookResult(
     (variables, {optimisticResult, typedOptimisticResult}) =>
         result.runMutation(
-      variables.toJson(),
-      optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-    ),
+          variables.toJson(),
+          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+        ),
     result.result,
   );
 }
 
 graphql.ObservableQuery<Mutation$AddComment> useWatchMutation$AddComment(
-        WatchOptions$Mutation$AddComment options) =>
-    graphql_flutter.useWatchMutation(options);
+  WatchOptions$Mutation$AddComment options,
+) => graphql_flutter.useWatchMutation(options);
 
 class WidgetOptions$Mutation$AddComment
     extends graphql.MutationOptions<Mutation$AddComment> {
@@ -1176,47 +1127,48 @@ class WidgetOptions$Mutation$AddComment
     OnMutationCompleted$Mutation$AddComment? onCompleted,
     graphql.OnMutationUpdate<Mutation$AddComment>? update,
     graphql.OnError? onError,
-  })  : onCompletedWithParsed = onCompleted,
-        super(
-          operationName: operationName,
-          fetchPolicy: fetchPolicy,
-          errorPolicy: errorPolicy,
-          cacheRereadPolicy: cacheRereadPolicy,
-          optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
-          context: context,
-          onCompleted: onCompleted == null
-              ? null
-              : (data) => onCompleted(
-                    data,
-                    data == null ? null : _parserFn$Mutation$AddComment(data),
-                  ),
-          update: update,
-          onError: onError,
-          document: documentNodeMutationAddComment,
-          parserFn: _parserFn$Mutation$AddComment,
-        );
+  }) : onCompletedWithParsed = onCompleted,
+       super(
+         operationName: operationName,
+         fetchPolicy: fetchPolicy,
+         errorPolicy: errorPolicy,
+         cacheRereadPolicy: cacheRereadPolicy,
+         optimisticResult: optimisticResult ?? typedOptimisticResult?.toJson(),
+         context: context,
+         onCompleted: onCompleted == null
+             ? null
+             : (data) => onCompleted(
+                 data,
+                 data == null ? null : _parserFn$Mutation$AddComment(data),
+               ),
+         update: update,
+         onError: onError,
+         document: documentNodeMutationAddComment,
+         parserFn: _parserFn$Mutation$AddComment,
+       );
 
   final OnMutationCompleted$Mutation$AddComment? onCompletedWithParsed;
 
   @override
   List<Object?> get properties => [
-        ...super.onCompleted == null
-            ? super.properties
-            : super.properties.where((property) => property != onCompleted),
-        onCompletedWithParsed,
-      ];
+    ...super.onCompleted == null
+        ? super.properties
+        : super.properties.where((property) => property != onCompleted),
+    onCompletedWithParsed,
+  ];
 }
 
-typedef RunMutation$Mutation$AddComment
-    = graphql.MultiSourceResult<Mutation$AddComment> Function(
-  Variables$Mutation$AddComment, {
-  Object? optimisticResult,
-  Mutation$AddComment? typedOptimisticResult,
-});
-typedef Builder$Mutation$AddComment = widgets.Widget Function(
-  RunMutation$Mutation$AddComment,
-  graphql.QueryResult<Mutation$AddComment>?,
-);
+typedef RunMutation$Mutation$AddComment =
+    graphql.MultiSourceResult<Mutation$AddComment> Function(
+      Variables$Mutation$AddComment, {
+      Object? optimisticResult,
+      Mutation$AddComment? typedOptimisticResult,
+    });
+typedef Builder$Mutation$AddComment =
+    widgets.Widget Function(
+      RunMutation$Mutation$AddComment,
+      graphql.QueryResult<Mutation$AddComment>?,
+    );
 
 class Mutation$AddComment$Widget
     extends graphql_flutter.Mutation<Mutation$AddComment> {
@@ -1225,26 +1177,17 @@ class Mutation$AddComment$Widget
     WidgetOptions$Mutation$AddComment? options,
     required Builder$Mutation$AddComment builder,
   }) : super(
-          key: key,
-          options: options ?? WidgetOptions$Mutation$AddComment(),
-          builder: (
-            run,
-            result,
-          ) =>
-              builder(
-            (
-              variables, {
-              optimisticResult,
-              typedOptimisticResult,
-            }) =>
-                run(
-              variables.toJson(),
-              optimisticResult:
-                  optimisticResult ?? typedOptimisticResult?.toJson(),
-            ),
-            result,
-          ),
-        );
+         key: key,
+         options: options ?? WidgetOptions$Mutation$AddComment(),
+         builder: (run, result) => builder(
+           (variables, {optimisticResult, typedOptimisticResult}) => run(
+             variables.toJson(),
+             optimisticResult:
+                 optimisticResult ?? typedOptimisticResult?.toJson(),
+           ),
+           result,
+         ),
+       );
 }
 
 class Mutation$AddComment$addComment {
@@ -1279,10 +1222,7 @@ class Mutation$AddComment$addComment {
   int get hashCode {
     final l$id = id;
     final l$$__typename = $__typename;
-    return Object.hashAll([
-      l$id,
-      l$$__typename,
-    ]);
+    return Object.hashAll([l$id, l$$__typename]);
   }
 
   @override
@@ -1311,10 +1251,7 @@ class Mutation$AddComment$addComment {
 extension UtilityExtension$Mutation$AddComment$addComment
     on Mutation$AddComment$addComment {
   CopyWith$Mutation$AddComment$addComment<Mutation$AddComment$addComment>
-      get copyWith => CopyWith$Mutation$AddComment$addComment(
-            this,
-            (i) => i,
-          );
+  get copyWith => CopyWith$Mutation$AddComment$addComment(this, (i) => i);
 }
 
 abstract class CopyWith$Mutation$AddComment$addComment<TRes> {
@@ -1326,18 +1263,12 @@ abstract class CopyWith$Mutation$AddComment$addComment<TRes> {
   factory CopyWith$Mutation$AddComment$addComment.stub(TRes res) =
       _CopyWithStubImpl$Mutation$AddComment$addComment;
 
-  TRes call({
-    int? id,
-    String? $__typename,
-  });
+  TRes call({int? id, String? $__typename});
 }
 
 class _CopyWithImpl$Mutation$AddComment$addComment<TRes>
     implements CopyWith$Mutation$AddComment$addComment<TRes> {
-  _CopyWithImpl$Mutation$AddComment$addComment(
-    this._instance,
-    this._then,
-  );
+  _CopyWithImpl$Mutation$AddComment$addComment(this._instance, this._then);
 
   final Mutation$AddComment$addComment _instance;
 
@@ -1345,16 +1276,15 @@ class _CopyWithImpl$Mutation$AddComment$addComment<TRes>
 
   static const _undefined = <dynamic, dynamic>{};
 
-  TRes call({
-    Object? id = _undefined,
-    Object? $__typename = _undefined,
-  }) =>
-      _then(Mutation$AddComment$addComment(
-        id: id == _undefined || id == null ? _instance.id : (id as int),
-        $__typename: $__typename == _undefined || $__typename == null
-            ? _instance.$__typename
-            : ($__typename as String),
-      ));
+  TRes call({Object? id = _undefined, Object? $__typename = _undefined}) =>
+      _then(
+        Mutation$AddComment$addComment(
+          id: id == _undefined || id == null ? _instance.id : (id as int),
+          $__typename: $__typename == _undefined || $__typename == null
+              ? _instance.$__typename
+              : ($__typename as String),
+        ),
+      );
 }
 
 class _CopyWithStubImpl$Mutation$AddComment$addComment<TRes>
@@ -1363,9 +1293,5 @@ class _CopyWithStubImpl$Mutation$AddComment$addComment<TRes>
 
   TRes _res;
 
-  call({
-    int? id,
-    String? $__typename,
-  }) =>
-      _res;
+  call({int? id, String? $__typename}) => _res;
 }

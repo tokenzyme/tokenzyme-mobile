@@ -138,7 +138,7 @@ class Trades extends HookConsumerWidget {
           ).sliver,
           AppPadding.content.heightBox.sliver,
           SliverList.separated(
-            separatorBuilder: (_, __) => AppPadding.content.heightBox,
+            separatorBuilder: (_, _) => AppPadding.content.heightBox,
             itemCount: trades.length,
             itemBuilder: (_, int index) => LayoutBuilder(builder: (_, BoxConstraints constraints) {
               Query$ListTrades$trades trade = trades[index];
@@ -167,7 +167,7 @@ class Trades extends HookConsumerWidget {
                       builder: (_, link.FollowLink? followLink) => Icon(
                         HugeIcons.strokeRoundedLink02,
                         size: IconSize.smAlt,
-                      ).inkWell(customBorder: CircleBorder(), onPressed: followLink),
+                      ).tappable(customBorder: CircleBorder(), onPressed: followLink),
                     ).alignAtCenterRight().sizedBox(width: constraints.maxWidth * 0.08),
                   ],
                 ),

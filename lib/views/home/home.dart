@@ -23,7 +23,7 @@ class Home extends HookConsumerWidget {
       Options$Query$GetEthPrice(
         onComplete: (Map<String, dynamic>? data, Query$GetEthPrice? parsedData) {
           if (parsedData != null) {
-            ref.read(ethPriceProvider.notifier).state = parsedData.ethPrice;
+            ref.read(ethPriceProvider.notifier).update(parsedData.ethPrice);
           }
         },
       ),

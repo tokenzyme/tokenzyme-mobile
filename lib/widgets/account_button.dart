@@ -47,7 +47,7 @@ class AccountButton extends HookConsumerWidget {
           Icon(HugeIcons.strokeRoundedWallet01),
           formatAccountAddress(getConnectedAddress(appKitModal)).text(),
         ],
-      ).paddingSymmetric(horizontal: AppPadding.md, vertical: AppPadding.sm).inkWell(onPressed: handleAccountPressed),
+      ).paddingSymmetric(horizontal: AppPadding.md, vertical: AppPadding.sm).tappable(onPressed: handleAccountPressed),
     );
   }
 }

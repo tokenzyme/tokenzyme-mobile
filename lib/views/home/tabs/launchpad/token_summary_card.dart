@@ -104,7 +104,7 @@ class TokenSummaryCard extends HookWidget {
             ],
           ),
         ],
-      ).paddingAll(AppPadding.content).inkWell(onPressed: handleCardPressed),
+      ).paddingAll(AppPadding.content).tappable(onPressed: handleCardPressed),
     );
   }
 }

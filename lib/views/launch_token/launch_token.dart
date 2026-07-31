@@ -32,12 +32,12 @@ class LaunchToken extends HookWidget {
     TextEditingController buyAmountController = useTextEditingController();
 
     void handleContinuePressed() async {
-      context.hideKeyboard();
+      context.dismissKeyboard();
       pageController.nextPage(duration: const Duration(milliseconds: 200), curve: Curves.decelerate);
     }
 
     void handleBackPressed() async {
-      context.hideKeyboard();
+      context.dismissKeyboard();
       pageController.previousPage(duration: const Duration(milliseconds: 200), curve: Curves.decelerate);
     }
 

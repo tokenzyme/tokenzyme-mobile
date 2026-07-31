@@ -1,13 +1,17 @@
 import 'package:flutter/material.dart';
-import 'package:hooks_riverpod/hooks_riverpod.dart';
 import 'package:riverpod_annotation/riverpod_annotation.dart';
 import 'package:tokenzyme_mobile/utils/storage.dart';
 
 part 'providers.g.dart';
 
-StateProvider<double> ethPriceProvider = StateProvider<double>((_) => 0);
+/// Native token price in USD, pushed in by the indexer's WebSocket feed.
+@riverpod
+class EthPrice extends _$EthPrice {
+  @override
+  double build() => 0;
 
-StateProvider<String?> accountChangedProvider = StateProvider<String?>((_) => null);
+  void update(double value) => state = value;
+}
 
 @riverpod
 Future<ThemeMode> theme(Ref ref) {

@@ -81,7 +81,7 @@ class TokenCard extends StatelessWidget {
                           builder: (_, FollowLink? followLink) => Icon(
                             HugeIcons.strokeRoundedGlobe02,
                             size: IconSize.md,
-                          ).inkWell(customBorder: CircleBorder(), onPressed: followLink),
+                          ).tappable(customBorder: CircleBorder(), onPressed: followLink),
                         ),
                       if (xUrl?.isNotEmpty == true)
                         Link(
@@ -89,7 +89,7 @@ class TokenCard extends StatelessWidget {
                           builder: (_, FollowLink? followLink) => Icon(
                             HugeIcons.strokeRoundedNewTwitter,
                             size: IconSize.md,
-                          ).inkWell(customBorder: CircleBorder(), onPressed: followLink),
+                          ).tappable(customBorder: CircleBorder(), onPressed: followLink),
                         ),
                       if (telegramUrl?.isNotEmpty == true)
                         Link(
@@ -97,7 +97,7 @@ class TokenCard extends StatelessWidget {
                           builder: (_, FollowLink? followLink) => Icon(
                             HugeIcons.strokeRoundedTelegram,
                             size: IconSize.md,
-                          ).inkWell(customBorder: CircleBorder(), onPressed: followLink),
+                          ).tappable(customBorder: CircleBorder(), onPressed: followLink),
                         ),
                       if (discordUrl?.isNotEmpty == true)
                         Link(
@@ -105,7 +105,7 @@ class TokenCard extends StatelessWidget {
                           builder: (_, FollowLink? followLink) => Icon(
                             HugeIcons.strokeRoundedDiscord,
                             size: IconSize.md,
-                          ).inkWell(customBorder: CircleBorder(), onPressed: followLink),
+                          ).tappable(customBorder: CircleBorder(), onPressed: followLink),
                         ),
                       if (redditUrl?.isNotEmpty == true)
                         Link(
@@ -113,7 +113,7 @@ class TokenCard extends StatelessWidget {
                           builder: (_, FollowLink? followLink) => Icon(
                             HugeIcons.strokeRoundedReddit,
                             size: IconSize.md,
-                          ).inkWell(customBorder: CircleBorder(), onPressed: followLink),
+                          ).tappable(customBorder: CircleBorder(), onPressed: followLink),
                         ),
                       if (facebookUrl?.isNotEmpty == true)
                         Link(
@@ -121,7 +121,7 @@ class TokenCard extends StatelessWidget {
                           builder: (_, FollowLink? followLink) => Icon(
                             HugeIcons.strokeRoundedFacebook01,
                             size: IconSize.md,
-                          ).inkWell(customBorder: CircleBorder(), onPressed: followLink),
+                          ).tappable(customBorder: CircleBorder(), onPressed: followLink),
                         ),
                       if (instagramUrl?.isNotEmpty == true)
                         Link(
@@ -129,7 +129,7 @@ class TokenCard extends StatelessWidget {
                           builder: (_, FollowLink? followLink) => Icon(
                             HugeIcons.strokeRoundedInstagram,
                             size: IconSize.md,
-                          ).inkWell(customBorder: CircleBorder(), onPressed: followLink),
+                          ).tappable(customBorder: CircleBorder(), onPressed: followLink),
                         ),
                     ],
                   ),
@@ -147,13 +147,13 @@ class TokenCard extends StatelessWidget {
                 Icon(
                   HugeIcons.strokeRoundedCopy01,
                   size: IconSize.md,
-                ).inkWell(customBorder: CircleBorder(), onPressed: handleCopyAddressPressed),
+                ).tappable(customBorder: CircleBorder(), onPressed: handleCopyAddressPressed),
                 Link(
                   uri: Uri.parse(getAddressUrl(address!)),
                   builder: (_, FollowLink? followLink) => Icon(
                     HugeIcons.strokeRoundedLink02,
                     size: IconSize.md,
-                  ).inkWell(customBorder: CircleBorder(), onPressed: followLink),
+                  ).tappable(customBorder: CircleBorder(), onPressed: followLink),
                 ),
               ],
             ),
