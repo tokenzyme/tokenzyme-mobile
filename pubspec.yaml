@@ -13,40 +13,40 @@ environment:
 dependencies:
   flutter:
     sdk: flutter
-  awesome_extensions: 2.0.25
+  awesome_extensions: 2.1.1
   decimal: 3.2.4
   flutter_dotenv: 5.2.1
-  flutter_hooks: 0.20.5
-  flutter_native_splash: 2.4.6
+  flutter_hooks: 0.21.3+1
+  flutter_native_splash: 2.4.8
   flutter_secure_storage: 9.2.4
-  gql: 1.0.1-alpha+1730759315362
-  graphql_flutter: 5.2.0
-  hooks_riverpod: 2.6.1
-  http: 1.5.0
+  gql: 1.0.1
+  graphql_flutter: 5.2.1
+  hooks_riverpod: 3.3.2
+  http: 1.6.0
   hugeicons: 0.0.11
-  image_picker: 1.2.0
-  intl: 0.20.2
-  json_annotation: 4.9.0
+  image_picker: 1.2.3
+  intl: 0.20.3
+  json_annotation: 4.12.0
   package_info_plus: 8.3.1
-  reown_appkit: 1.6.0
-  riverpod_annotation: 2.6.1
-  shared_preferences: 2.5.3
+  reown_appkit: 1.7.6
+  riverpod_annotation: 4.0.3
+  shared_preferences: 2.5.5
   sliver_tools: 0.2.12
-  socket_io_client: 3.1.2
+  socket_io_client: 3.1.6
   timeago: 3.7.1
   top_snackbar_flutter: 3.3.0
   url_launcher: 6.3.2
   web3dart: 2.7.3
-  webview_flutter: 4.13.0
+  webview_flutter: 4.14.1
 
 dev_dependencies:
   flutter_test:
     sdk: flutter
-  build_runner: 2.5.4
+  build_runner: 2.15.1
   flutter_lints: 6.0.0
-  graphql_codegen: 1.2.3
-  json_serializable: 6.9.5
-  riverpod_generator: 2.6.5
+  graphql_codegen: 3.0.2
+  json_serializable: 6.14.1
+  riverpod_generator: 4.0.4
 
 flutter:
   uses-material-design: true
